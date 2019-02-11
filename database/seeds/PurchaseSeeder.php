@@ -1,0 +1,20 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class PurchaseSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        DB::table('tickets')->insert([
+            'user_id'   => 0 ,
+            'ticket_number' => '0'
+
+        ]);
+    }
+}
