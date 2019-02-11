@@ -1,1491 +1,1620 @@
 <!DOCTYPE html>
-    
-<html lang="en">
+<html lang="zxx">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Lottery | Tambola</title>
-    <meta name="description" content="Lottery game for everyone">
-    <meta name="keywords" content="game, gaming">
-    <meta name="author" content="_nK">
-    <link rel="icon" type="image/png" href="home/images/favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- START: Styles -->
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7cOpen+Sans:400,700" rel="stylesheet" type="text/css">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="home/vendor/bootstrap/dist/css/bootstrap.min.css">
-    <!-- FontAwesome -->
-    <script defer src="home/vendor/fontawesome-free/js/all.js"></script>
-    <script defer src="home/vendor/fontawesome-free/js/v4-shims.js"></script>
-    <!-- IonIcons -->
-    <link rel="stylesheet" href="home/vendor/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="home/flipclock.css">
-    <!-- Flickity -->
-    <link rel="stylesheet" href="home/vendor/flickity/dist/flickity.min.css">
-    <!-- Photoswipe -->
-    <link rel="stylesheet" type="text/css" href="home/vendor/photoswipe/dist/photoswipe.css">
-    <link rel="stylesheet" type="text/css" href="home/vendor/photoswipe/dist/default-skin/default-skin.css">
-    <!-- Seiyria Bootstrap Slider -->
-    <link rel="stylesheet" href="home/vendor/bootstrap-slider/dist/css/bootstrap-slider.min.css">
-    <!-- Summernote -->
-    <link rel="stylesheet" type="text/css" href="home/vendor/summernote/dist/summernote-bs4.css">
-    <!-- GoodGames -->
-    <link rel="stylesheet" href="home/css/goodgames.css">
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="home/css/custom.css">
-    <!-- END: Styles -->
-    <!-- jQuery -->
-    <script src="home/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="home/flipclock.js"></script>
+	<!-- Basic Page Needs
+	================================================== -->
+	<title>XINROX &amp; TAMBOLA</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="XINROX, TAMBOLA">
+	<meta name="author" content="XINROX, TAMBOLA">
+	<meta name="keywords" content="XINROX , TAMBOLA ">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="{{ asset('assets/images/esports/favicons/favicon.ico') }}">
+	<link rel="apple-touch-icon" sizes="120x120" href="{{ asset('assets/images/esports/favicons/favicon-120.png') }}">
+	<link rel="apple-touch-icon" sizes="152x152" href="{{ asset('assets/images/esports/favicons/favicon-152.png') }}">
+
+	<!-- Mobile Specific Metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+
+	<!-- Google Web Fonts
+	================================================== -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Roboto+Condensed:400,400i,700,700i" rel="stylesheet">
+
+	<!-- CSS
+	================================================== -->
+	<!-- Vendor CSS -->
+	<link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
+	<link href="{{ asset('assets/fonts/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+	<link href="{{ asset('assets/fonts/simple-line-icons/css/simple-line-icons.css')}}" rel="stylesheet">
+	<link href="{{ asset('assets/vendor/magnific-popup/dist/magnific-popup.css')}}" rel="stylesheet">
+	<link href="{{ asset('assets/vendor/slick/slick.css')}}" rel="stylesheet">
+
+
+	<!-- Template CSS-->
+	<link href="{{ asset('assets/css/style-esports.css')}}" rel="stylesheet">
+
+	<!-- Custom CSS-->
+	<link href="{{ asset('assets/css/custom.css')}}" rel="stylesheet">
+
 </head>
-<!--
-    Additional Classes:
-        .nk-page-boxed
--->
-<body>
-<!--
-    Additional Classes:
-        .nk-header-opaque
--->
-<header class="nk-header nk-header-opaque">
-
-    
-    
-<!-- START: Top Contacts -->
-<div class="nk-contacts-top">
-    <div class="container">
-        <div class="nk-contacts-left">
-            <ul class="nk-social-links">
-                <li><a class="nk-social-rss" href="#"><span class="fa fa-rss"></span></a></li>
-                <li><a class="nk-social-twitch" href="#"><span class="fab fa-twitch"></span></a></li>
-                <li><a class="nk-social-steam" href="#"><span class="fab fa-steam"></span></a></li>
-                <li><a class="nk-social-facebook" href="#"><span class="fab fa-facebook"></span></a></li>
-                <li><a class="nk-social-google-plus" href="#"><span class="fab fa-google-plus"></span></a></li>
-                <li><a class="nk-social-twitter" href="https://twitter.com/nkdevv" target="_blank"><span class="fab fa-twitter"></span></a></li>
-                <li><a class="nk-social-pinterest" href="#"><span class="fab fa-pinterest-p"></span></a></li>
-            </ul>
-        </div>
-        <div class="nk-contacts-right">
-            <ul class="nk-contacts-icons">
-                <li>
-                    <a href="#" data-toggle="modal" data-target="#modalSearch">
-                        <span class="fa fa-search"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/login" target="_blank">
-                        <span class="fa fa-user"></span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!-- END: Top Contacts -->
-    <!--
-        START: Navbar
-
-        Additional Classes:
-            .nk-navbar-sticky
-            .nk-navbar-transparent
-            .nk-navbar-autohide
-    -->
-    <nav class="nk-navbar nk-navbar-top nk-navbar-sticky nk-navbar-autohide">
-        <div class="container">
-            <div class="nk-nav-table">
-                
-                <a href="index.html" class="nk-nav-logo">
-                    <img src="home/images/logo3.png" alt="GoodGames" width="150">
-                </a>
-                
-                <ul class="nk-nav nk-nav-right d-none d-lg-table-cell" data-nav-mobile="#nk-nav-mobile">
-                    
-        <li class=" nk-drop-item">
-            <a href="/about">
-                ABOUT   
-            </a>
-        </li>
-        <li class=" nk-drop-item">
-            <a href="/results">
-                Check Result
-            </a>
-        </li>
-        <li class=" nk-drop-item">
-            <a href="/dashboard">
-            Account 
-            </a>
-            </li>
-                <ul class="nk-nav nk-nav-right nk-nav-icons">
-                    
-                        <li class="single-icon d-lg-none">
-                            <a href="#" class="no-link-effect" data-nav-toggle="#nk-nav-mobile">
-                                <span class="nk-icon-burger">
-                                    <span class="nk-t-1"></span>
-                                    <span class="nk-t-2"></span>
-                                    <span class="nk-t-3"></span>
-                                </span>
-                            </a>
-                        </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- END: Navbar -->
-</header>
-
-    
-    
-        <!--
-    START: Navbar Mobile
-
-    Additional Classes:
-        .nk-navbar-left-side
-        .nk-navbar-right-side
-        .nk-navbar-lg
-        .nk-navbar-overlay-content
--->
-<div id="nk-nav-mobile" class="nk-navbar nk-navbar-side nk-navbar-right-side nk-navbar-overlay-content d-lg-none">
-    <div class="nano">
-        <div class="nano-content">
-            <a href="index.html" class="nk-nav-logo">
-                <img src="home/images/logo.png" alt="" width="120">
-            </a>
-            <div class="nk-navbar-mobile-content">
-                <ul class="nk-nav">
-                    <!-- Here will be inserted menu from [data-mobile-menu="#nk-nav-mobile"] -->
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- END: Navbar Mobile -->
-
-    
-
-    <div class="nk-main">
-        
-            <div class="nk-gap-2"></div>
-        
-
-        
-<div class="container">
-
-    <!-- START: Image Slider -->
-    <div class="nk-image-slider" data-autoplay="8000">
-        
-        
-        <div class="nk-image-slider-item">
-            <img src="home/images/FB.jpg" alt="" class="nk-image-slider-img" data-thumb="home/images/FB.jpg">
-            
-            <div class="nk-image-slider-content">
-                
-                    <h3 class="h4">As we Passed, I remarked</h3>
-                    <p class="text-white">As we passed, I remarked a beautiful church-spire rising above some old elms in the park; and before them, in the midst of a lawn, chimneys covered with ivy, and the windows shining in the sun.</p>
-                    <a href="#" class="nk-btn nk-btn-rounded nk-btn-color-white nk-btn-hover-color-main-1">Read More</a>
-                
-            </div>
-            
-        </div>
-        
-        <div class="nk-image-slider-item">
-            <img src="home/images/game.jpg" alt="" class="nk-image-slider-img" data-thumb="home/images/game.jpg">
-            
-            <div class="nk-image-slider-content">
-                
-                    <h3 class="h4">He made his passenger captain of one</h3>
-                    <p class="text-white">Now the races of these two have been for some ages utterly extinct, and besides to discourse any further of them would not be at all to my purpose. But the concern I have most at heart is for our Corporation of Poets, from whom I am preparing a petition to your Highness,  to be subscribed with the names of one...</p>
-                    <a href="#" class="nk-btn nk-btn-rounded nk-btn-color-white nk-btn-hover-color-main-1">Read More</a>
-                
-            </div>
-            
-        </div>
-        
-        <div class="nk-image-slider-item">
-            <img src="userpanel/img/tambola_bg.jpg" alt="" class="nk-image-slider-img" data-thumb="userpanel/img/tambola_bg.jpg">
-             <div class="nk-image-slider-content">
-                
-                    <h3 class="h4">As we Passed, I remarked</h3>
-                    <p class="text-white">As we passed, I remarked a beautiful church-spire rising above some old elms in the park; and before them, in the midst of a lawn, chimneys covered with ivy, and the windows shining in the sun.</p>
-                    <a href="#" class="nk-btn nk-btn-rounded nk-btn-color-white nk-btn-hover-color-main-1">Read More</a>
-                
-            </div>
-        </div>
-        
-        
-        
-      
-        
-    </div>
-    <!-- END: Image Slider -->
-
-    <!-- START: Categories -->
-    <div class="nk-gap-2"></div>
-    <div class="row vertical-gap">
-        <div class="col-lg-4">
-            <div class="nk-feature-1">
-                <div class="nk-feature-icon">
-                    <img src="home/images/icon-mouse.png" alt="">
-                </div>
-                <div class="nk-feature-cont">
-                    <h3 class="nk-feature-title"><a href="#"> PICK A NUMBER</a></h3>
-                   
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="nk-feature-1">
-                <div class="nk-feature-icon">
-                    <img src="home/images/icon-gamepad.png" alt="">
-                </div>
-                <div class="nk-feature-cont">
-                    <h3 class="nk-feature-title"><a href="#">BUY TICKET</a></h3>
-                  
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="nk-feature-1">
-                <div class="nk-feature-icon">
-                    <img src="home/images/icon-gamepad-2.png" alt="">
-                </div>
-                <div class="nk-feature-cont">
-                    <h3 class="nk-feature-title"><a href="#">WIN AWESOME PRIZES</a></h3>
-                   
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END: Categories -->
-
-    <!-- START: Latest News -->
-    <div class="nk-gap-2"></div>
-    <h3 class="nk-decorated-h-2"><span><span class="text-main-1">AWESOME</span> PRIZES</span></h3>
-    <div class="nk-gap"></div>
-
-    <div class="nk-news-box">
-        <div class="nk-news-box-list">
-            <div class="nano">
-                <div class="nano-content">
-                    
-                <div class="nk-news-box-item nk-news-box-item-active">
-                        <div class="nk-news-box-item-img">
-                            <img src="https://media.giphy.com/media/5dYnxnkIVeEy5jj5tQ/giphy.gif" alt="We found a witch! May we burn her?">
-                        </div>
-                        <img src="https://media.giphy.com/media/5dYnxnkIVeEy5jj5tQ/giphy.gif" alt="We found a witch! May we burn her?" class="nk-news-box-item-full-img">
-                        <h3 class="nk-news-box-item-title">We found a witch! May we burn her?</h3>
-                        
-                        <span class="nk-news-box-item-categories">
-                            <span class="bg-main-2">Adventure</span>
-                        </span>
-                        
-                        <div class="nk-news-box-item-text">
-                            <p>And she went on planning to herself how she would manage it. `They must go by the carrier,' she thought; `and how funny it'll seem, sending presents to one's own feet!...</p>
-                        </div>
-                        <a href="blog-article.html" class="nk-news-box-item-url">Read More</a>
-                        <div class="nk-news-box-item-date"><span class="fa fa-calendar"></span> Aug 27, 2018</div>
-                    </div>
-                    <div class="nk-news-box-item ">
-                        <div class="nk-news-box-item-img">
-                            <img src="https://media.giphy.com/media/2djT42mNKro7P3XWmW/giphy.gif" alt="Smell magic in the air. Or maybe barbecue">
-                        </div>
-                        <img src="https://media.giphy.com/media/2djT42mNKro7P3XWmW/giphy.gif" alt="Smell magic in the air. Or maybe barbecue" class="nk-news-box-item-full-img">
-                        <h3 class="nk-news-box-item-title">Smell magic in the air. Or maybe barbecue</h3>
-                        
-                        <span class="nk-news-box-item-categories">
-                            <span class="bg-main-4">MMO</span>
-                        </span>
-                        
-                        <div class="nk-news-box-item-text">
-                            <p>With what mingled joy and sorrow do I take up the pen to write to my dearest friend! Oh, what a change between to-day and yesterday! Now I am friendless and alone...</p>
-                        </div>
-                        <a href="blog-article.html" class="nk-news-box-item-url">Read More</a>
-                        <div class="nk-news-box-item-date"><span class="fa fa-calendar"></span> Sep 18, 2018</div>
-                    </div>
-                    
-                    
-                    <div class="nk-news-box-item">
-                        <div class="nk-news-box-item-img">
-                            <img src="home/images/jackpot.jpeg" alt="Grab your sword and fight the Horde">
-                        </div>
-                        <img src="home/images/jackpot.jpeg" alt="Grab your sword and fight the Horde" class="nk-news-box-item-full-img">
-                        <h3 class="nk-news-box-item-title">Grab your sword and fight the Horde</h3>
-                        
-                        <span class="nk-news-box-item-categories">
-                            <span class="bg-main-1">Action</span>
-                        </span>
-                        
-                        <div class="nk-news-box-item-text">
-                            <p>For good, too; though, in consequence of my previous emotions, I was still occasionally seized with a stormy sob . After we had jogged on for some little time, I asked the carrier...</p>
-                        </div>
-                        <a href="blog-article.html" class="nk-news-box-item-url">Read More</a>
-                        <div class="nk-news-box-item-date"><span class="fa fa-calendar"></span> Sep 5, 2018</div>
-                    </div>
-                    
-                    
-                
-                    
-                    
-                    <div class="nk-news-box-item">
-                        <div class="nk-news-box-item-img">
-                            <img src="home/images/post-4-sm.jpg" alt="For good, too though, in consequence">
-                        </div>
-                        <img src="home/images/post-4.jpg" alt="For good, too though, in consequence" class="nk-news-box-item-full-img">
-                        <h3 class="nk-news-box-item-title">For good, too though, in consequence</h3>
-                        
-                        <span class="nk-news-box-item-categories">
-                            <span class="bg-main-3">Strategy</span>
-                        </span>
-                        
-                        <div class="nk-news-box-item-text">
-                            <p>This little wandering journey, without settled place of abode, had been so unpleasant to me, that my own house, as I called it to myself, was a perfect settlement to me compared to that...</p>
-                        </div>
-                        <a href="blog-article.html" class="nk-news-box-item-url">Read More</a>
-                        <div class="nk-news-box-item-date"><span class="fa fa-calendar"></span> Aug 14, 2018</div>
-                    </div>
-                    
-                    
-                    <div class="nk-news-box-item">
-                        <div class="nk-news-box-item-img">
-                            <img src="home/images/post-5-sm.jpg" alt="He made his passenger captain of one">
-                        </div>
-                        <img src="home/images/post-5.jpg" alt="He made his passenger captain of one" class="nk-news-box-item-full-img">
-                        <h3 class="nk-news-box-item-title">He made his passenger captain of one</h3>
-                        
-                        <span class="nk-news-box-item-categories">
-                            <span class="bg-main-5">Indie</span>
-                        </span>
-                        
-                        <div class="nk-news-box-item-text">
-                            <p>Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door...</p>
-                        </div>
-                        <a href="blog-article.html" class="nk-news-box-item-url">Read More</a>
-                        <div class="nk-news-box-item-date"><span class="fa fa-calendar"></span> Jul 23, 2018</div>
-                    </div>
-                    
-                    
-                    <div class="nk-news-box-item">
-                        <div class="nk-news-box-item-img">
-                            <img src="home/images/post-6-sm.jpg" alt="At first, for some time, I was not able to answer">
-                        </div>
-                        <img src="home/images/post-6.jpg" alt="At first, for some time, I was not able to answer" class="nk-news-box-item-full-img">
-                        <h3 class="nk-news-box-item-title">At first, for some time, I was not able to answer</h3>
-                        
-                        <span class="nk-news-box-item-categories">
-                            <span class="bg-main-5">Racing</span>
-                        </span>
-                        
-                        <div class="nk-news-box-item-text">
-                            <p>This little wandering journey, without settled place of abode, had been so unpleasant to me, that my own house, as I called it to myself, was a perfect settlement to me compared to that...</p>
-                        </div>
-                        <a href="blog-article.html" class="nk-news-box-item-url">Read More</a>
-                        <div class="nk-news-box-item-date"><span class="fa fa-calendar"></span> Jul 3, 2018</div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="nk-news-box-each-info">
-            <div class="nano">
-                <div class="nano-content">
-                    <!-- There will be inserted info about selected news-->
-                    <div class="nk-news-box-item-image">
-                        <img src="home/images/post-1.jpg" alt="">
-                        <span class="nk-news-box-item-categories">
-                            <span class="bg-main-4">MMO</span>
-                        </span>
-                    </div>
-                    <h3 class="nk-news-box-item-title">Smell magic in the air. Or maybe barbecue</h3>
-                    <div class="nk-news-box-item-text">
-                        <p>With what mingled joy and sorrow do I take up the pen to write to my dearest friend! Oh, what a change between to-day and yesterday! Now I am friendless and alone...</p>
-                    </div>
-                    <a href="blog-article.html" class="nk-news-box-item-more">Read More</a>
-                    <div class="nk-news-box-item-date">
-                        <span class="fa fa-calendar"></span> Sep 18, 2018
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-   
-
-    <div class="nk-gap-2"></div>
-    <div class="row vertical-gap">
-        <div class="col-lg-8">
-
-            <!-- START: Latest Matches -->
-            <div class="nk-gap-2"></div>
-            <h3 class="nk-decorated-h-2"><span><span class="text-main-1">TAMBOLA</span> CALENDAR</span></h3>
-            <div class="nk-gap"></div>
-           
-            <div class="nk-gap"></div>
-            @foreach($draw_schedule as $schedule)
-            <div class="nk-match">
-                <div class="nk-match-team-left">
-                    <a href="#">
-                        <span class="nk-match-team-logo">
-                            <img src="home/images/team-1.jpg" alt="">
-                        </span>
-                        <span class="nk-match-team-name">
-                            LUCKY NUMBER
-                        </span>
-                    </a>
-                </div>
-                <div class="nk-match-status">
-                    <a href="#">
-                        <span class="nk-match-status-vs"></span>
-                        <span class="nk-match-status-date">{{ date('F d, Y ',strtotime($schedule->draw_date)) }}</span>
-                       
-                       @if($schedule->status == 1) 
-                          <a href="/results" target="_blank"> <span class="nk-match-score bg-danger">
-                           SHOW RESULT  
-                        </span>
-                       </a>
-                        @else
-                         <a href="/dashboard" target="_blank">
-                            <span class="nk-match-score bg-success">
-                            BUY TICKET 
-                            </span>
-                        </a>
-                        @endif
-                   
-                </div>
-                <div class="nk-match-team-right">
-                    <a href="#">
-                        <span class="nk-match-team-name">
-                            TICKET PRICE
-                        </span>
-                        <span class="nk-match-team-logo">
-                            $ 20
-                        </span>
-                    </a>
-                </div>
-            </div>
-        @endforeach
-            <div class="nk-gap-2"></div>
-            {{ $draw_schedule->links() }}
-           
-            <!-- END: Latest Matches -->
-
-            <!-- START: Tabbed News  -->
-            <div class="nk-gap-3"></div>
-            <h3 class="nk-decorated-h-2"><span><span class="text-main-1">Tabbed</span> News</span></h3>
-            <div class="nk-gap"></div>
-            <div class="nk-tabs">
-                <!--
-                    Additional Classes:
-                        .nav-tabs-fill
-                -->
-                <ul class="nav nav-tabs nav-tabs-fill" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#tabs-1-1" role="tab" data-toggle="tab">Action</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#tabs-1-2" role="tab" data-toggle="tab">MMO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#tabs-1-3" role="tab" data-toggle="tab">Strategy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#tabs-1-4" role="tab" data-toggle="tab">Adventure</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#tabs-1-5" role="tab" data-toggle="tab">Racing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#tabs-1-6" role="tab" data-toggle="tab">Indie</a>
-                    </li>
-                </ul>
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane fade show active" id="tabs-1-1">
-                        <div class="nk-gap"></div>
-                        <!-- START: Action Tab -->
-                        
-
-<div class="nk-blog-post nk-blog-post-border-bottom">
-    <a href="blog-article.html" class="nk-post-img">
-        <img src="home/images/post-2-fw.jpg" alt="Grab your sword and fight the Horde">
-        
-        <span class="nk-post-categories">
-            <span class="bg-main-1">Action</span>
-        </span>
-        
-    </a>
-    <div class="nk-gap-1"></div>
-    <h2 class="nk-post-title h4"><a href="blog-article.html">Grab your sword and fight the Horde</a></h2>
-    <div class="nk-post-date mt-10 mb-10">
-        <span class="fa fa-calendar"></span> Sep 5, 2018
-        <span class="fa fa-comments"></span> <a href="#">7 comments</a>
-    </div>
-    <div class="nk-post-text">
-        <p>For good, too; though, in consequence of my previous emotions, I was still occasionally seized with a stormy sob . After we had jogged on for some little time, I asked the carrier...</p>
-    </div>
-</div>
-
-
-
-<div class="nk-blog-post nk-blog-post-border-bottom">
-    <div class="row vertical-gap">
-        <div class="col-lg-3 col-md-5">
-            <a href="blog-article.html" class="nk-post-img">
-                <img src="home/images/post-7-mid-square.jpg" alt="At length one of them called out in a clear">
-                
-                <span class="nk-post-categories">
-                    <span class="bg-main-1">Action</span>
-                </span>
-                
-            </a>
-        </div>
-        <div class="col-lg-9 col-md-7">
-            <h2 class="nk-post-title h4"><a href="blog-article.html">At length one of them called out in a clear</a></h2>
-            <div class="nk-post-date mt-10 mb-10">
-                <span class="fa fa-calendar"></span> Jul 3, 2018
-                <span class="fa fa-comments"></span> <a href="#">0 comments</a>
-            </div>
-            <div class="nk-post-text">
-                <p>TJust then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door...</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="nk-blog-post nk-blog-post-border-bottom">
-    <div class="row vertical-gap">
-        <div class="col-lg-3 col-md-5">
-            <a href="blog-article.html" class="nk-post-img">
-                <img src="home/images/post-9-mid-square.jpg" alt="He made his passenger captain of one">
-                
-                <span class="nk-post-categories">
-                    <span class="bg-main-1">Action</span>
-                </span>
-                
-            </a>
-        </div>
-        <div class="col-lg-9 col-md-7">
-            <h2 class="nk-post-title h4"><a href="blog-article.html">He made his passenger captain of one</a></h2>
-            <div class="nk-post-date mt-10 mb-10">
-                <span class="fa fa-calendar"></span> Jul 3, 2018
-                <span class="fa fa-comments"></span> <a href="#">0 comments</a>
-            </div>
-            <div class="nk-post-text">
-                <p>Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door...</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-                        <!-- END: Action Tab -->
-                        <div class="nk-gap"></div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="tabs-1-2">
-                        <div class="nk-gap"></div>
-                        <!-- START: MMO Tab -->
-                        
-
-<div class="nk-blog-post nk-blog-post-border-bottom">
-    <a href="blog-article.html" class="nk-post-img">
-        <img src="home/images/post-1-fw.jpg" alt="Smell magic in the air. Or maybe barbecue">
-        
-        <span class="nk-post-categories">
-            <span class="bg-main-4">MMO</span>
-        </span>
-        
-    </a>
-    <div class="nk-gap-1"></div>
-    <h2 class="nk-post-title h4"><a href="blog-article.html">Smell magic in the air. Or maybe barbecue</a></h2>
-    <div class="nk-post-date mt-10 mb-10">
-        <span class="fa fa-calendar"></span> Sep 18, 2018
-        <span class="fa fa-comments"></span> <a href="#">4 comments</a>
-    </div>
-    <div class="nk-post-text">
-        <p>With what mingled joy and sorrow do I take up the pen to write to my dearest friend! Oh, what a change between to-day and yesterday! Now I am friendless and alone...</p>
-    </div>
-</div>
-
-
-
-<div class="nk-blog-post nk-blog-post-border-bottom">
-    <div class="row vertical-gap">
-        <div class="col-lg-3 col-md-5">
-            <a href="blog-article.html" class="nk-post-img">
-                <img src="home/images/post-5-mid-square.jpg" alt="He made his passenger captain of one">
-                
-                <span class="nk-post-categories">
-                    <span class="bg-main-4">MMO</span>
-                </span>
-                
-            </a>
-        </div>
-        <div class="col-lg-9 col-md-7">
-            <h2 class="nk-post-title h4"><a href="blog-article.html">He made his passenger captain of one</a></h2>
-            <div class="nk-post-date mt-10 mb-10">
-                <span class="fa fa-calendar"></span> Jul 23, 2018
-                <span class="fa fa-comments"></span> <a href="#">13 comments</a>
-            </div>
-            <div class="nk-post-text">
-                <p>Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door...</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-                        <!-- END: MMO Tab -->
-                        <div class="nk-gap"></div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="tabs-1-3">
-                        <div class="nk-gap"></div>
-                        <!-- START: Strategy Tab -->
-                        
-
-<div class="nk-blog-post nk-blog-post-border-bottom">
-    <a href="blog-article.html" class="nk-post-img">
-        <img src="home/images/post-3-fw.jpg" alt="We found a witch! May we burn her?">
-        
-        <span class="nk-post-categories">
-            <span class="bg-main-3">Strategy</span>
-        </span>
-        
-    </a>
-    <div class="nk-gap-1"></div>
-    <h2 class="nk-post-title h4"><a href="blog-article.html">We found a witch! May we burn her?</a></h2>
-    <div class="nk-post-date mt-10 mb-10">
-        <span class="fa fa-calendar"></span> Aug 27, 2018
-        <span class="fa fa-comments"></span> <a href="#">7 comments</a>
-    </div>
-    <div class="nk-post-text">
-        <p>And she went on planning to herself how she would manage it. `They must go by the carrier,' she thought; `and how funny it'll seem, sending presents to one's own feet!...</p>
-    </div>
-</div>
-
-
-
-<div class="nk-blog-post nk-blog-post-border-bottom">
-    <div class="row vertical-gap">
-        <div class="col-lg-3 col-md-5">
-            <a href="blog-article.html" class="nk-post-img">
-                <img src="home/images/post-4-mid-square.jpg" alt="For good, too though, in consequence">
-                
-                <span class="nk-post-categories">
-                    <span class="bg-main-3">Strategy</span>
-                </span>
-                
-            </a>
-        </div>
-        <div class="col-lg-9 col-md-7">
-            <h2 class="nk-post-title h4"><a href="blog-article.html">For good, too though, in consequence</a></h2>
-            <div class="nk-post-date mt-10 mb-10">
-                <span class="fa fa-calendar"></span> Aug 14, 2018
-                <span class="fa fa-comments"></span> <a href="#">23 comments</a>
-            </div>
-            <div class="nk-post-text">
-                <p>This little wandering journey, without settled place of abode, had been so unpleasant to me, that my own house, as I called it to myself, was a perfect settlement to me compared to that...</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-                        <!-- END: Strategy Tab -->
-                        <div class="nk-gap"></div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="tabs-1-4">
-                        <div class="nk-gap"></div>
-                        <!-- START: Adventure Tab -->
-                        
-
-<div class="nk-blog-post nk-blog-post-border-bottom">
-    <a href="blog-article.html" class="nk-post-img">
-        <img src="home/images/post-6-fw.jpg" alt="At first, for some time, I was not able to answer">
-        
-        <span class="nk-post-categories">
-            <span class="bg-main-2">Adventure</span>
-        </span>
-        
-    </a>
-    <div class="nk-gap-1"></div>
-    <h2 class="nk-post-title h4"><a href="blog-article.html">At first, for some time, I was not able to answer</a></h2>
-    <div class="nk-post-date mt-10 mb-10">
-        <span class="fa fa-calendar"></span> Jul 3, 2018
-        <span class="fa fa-comments"></span> <a href="#">0 comments</a>
-    </div>
-    <div class="nk-post-text">
-        <p>This little wandering journey, without settled place of abode, had been so unpleasant to me, that my own house, as I called it to myself, was a perfect settlement to me compared to that...</p>
-    </div>
-</div>
-
-
-
-                        <!-- END: Adventure Tab -->
-                        <div class="nk-gap"></div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="tabs-1-5">
-                        <div class="nk-gap"></div>
-                        <!-- START: Racing Tab -->
-                        
-
-<div class="nk-blog-post nk-blog-post-border-bottom">
-    <a href="blog-article.html" class="nk-post-img">
-        <img src="home/images/post-7-fw.jpg" alt="At length one of them called out in a clear">
-        
-        <span class="nk-post-categories">
-            <span class="bg-main-5">Racing</span>
-        </span>
-        
-    </a>
-    <div class="nk-gap-1"></div>
-    <h2 class="nk-post-title h4"><a href="blog-article.html">At length one of them called out in a clear</a></h2>
-    <div class="nk-post-date mt-10 mb-10">
-        <span class="fa fa-calendar"></span> Jul 3, 2018
-        <span class="fa fa-comments"></span> <a href="#">0 comments</a>
-    </div>
-    <div class="nk-post-text">
-        <p>TJust then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door...</p>
-    </div>
-</div>
-
-
-
-<div class="nk-blog-post nk-blog-post-border-bottom">
-    <div class="row vertical-gap">
-        <div class="col-lg-3 col-md-5">
-            <a href="blog-article.html" class="nk-post-img">
-                <img src="home/images/post-3-mid-square.jpg" alt="We found a witch! May we burn her?">
-                
-                <span class="nk-post-categories">
-                    <span class="bg-main-5">Racing</span>
-                </span>
-                
-            </a>
-        </div>
-        <div class="col-lg-9 col-md-7">
-            <h2 class="nk-post-title h4"><a href="blog-article.html">We found a witch! May we burn her?</a></h2>
-            <div class="nk-post-date mt-10 mb-10">
-                <span class="fa fa-calendar"></span> Aug 27, 2018
-                <span class="fa fa-comments"></span> <a href="#">7 comments</a>
-            </div>
-            <div class="nk-post-text">
-                <p>And she went on planning to herself how she would manage it. `They must go by the carrier,' she thought; `and how funny it'll seem, sending presents to one's own feet!...</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="nk-blog-post nk-blog-post-border-bottom">
-    <div class="row vertical-gap">
-        <div class="col-lg-3 col-md-5">
-            <a href="blog-article.html" class="nk-post-img">
-                <img src="home/images/post-4-mid-square.jpg" alt="For good, too though, in consequence">
-                
-                <span class="nk-post-categories">
-                    <span class="bg-main-5">Racing</span>
-                </span>
-                
-            </a>
-        </div>
-        <div class="col-lg-9 col-md-7">
-            <h2 class="nk-post-title h4"><a href="blog-article.html">For good, too though, in consequence</a></h2>
-            <div class="nk-post-date mt-10 mb-10">
-                <span class="fa fa-calendar"></span> Aug 14, 2018
-                <span class="fa fa-comments"></span> <a href="#">23 comments</a>
-            </div>
-            <div class="nk-post-text">
-                <p>This little wandering journey, without settled place of abode, had been so unpleasant to me, that my own house, as I called it to myself, was a perfect settlement to me compared to that...</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-                        <!-- END: Racing Tab -->
-                        <div class="nk-gap"></div>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="tabs-1-6">
-                        <div class="nk-gap"></div>
-                        <!-- START: Indie Tab -->
-                        
-
-<div class="nk-blog-post nk-blog-post-border-bottom">
-    <a href="blog-article.html" class="nk-post-img">
-        <img src="home/images/post-5-fw.jpg" alt="He made his passenger captain of one">
-        
-        <span class="nk-post-categories">
-            <span class="bg-main-2">Indie</span>
-        </span>
-        
-    </a>
-    <div class="nk-gap-1"></div>
-    <h2 class="nk-post-title h4"><a href="blog-article.html">He made his passenger captain of one</a></h2>
-    <div class="nk-post-date mt-10 mb-10">
-        <span class="fa fa-calendar"></span> Jul 23, 2018
-        <span class="fa fa-comments"></span> <a href="#">13 comments</a>
-    </div>
-    <div class="nk-post-text">
-        <p>Just then her head struck against the roof of the hall: in fact she was now more than nine feet high, and she at once took up the little golden key and hurried off to the garden door...</p>
-    </div>
-</div>
-
-
-                        <!-- END: Indie Tab -->
-                        <div class="nk-gap"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- END: Tabbed News -->
-
-
-            <!-- START: Latest Pictures -->
-            <div class="nk-gap"></div>
-            <h2 class="nk-decorated-h-2 h3"><span><span class="text-main-1">Latest</span> Pictures</span></h2>
-            <div class="nk-gap"></div>
-            <div class="nk-popup-gallery">
-                <div class="row vertical-gap">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="nk-gallery-item-box">
-                            <a href="home/images/gallery-1.jpg" class="nk-gallery-item" data-size="1016x572">
-                                <div class="nk-gallery-item-overlay"><span class="ion-eye"></span></div>
-                                <img src="home/images/gallery-1-thumb.jpg" alt="">
-                            </a>
-                            <div class="nk-gallery-item-description">
-                                <h4>Called Let</h4>
-                                Divided thing, land it evening earth winged whose great after. Were grass night. To Air itself saw bring fly fowl. Fly years behold spirit day greater of wherein winged and form. Seed open don't thing midst created dry every greater divided of, be man is. Second Bring stars fourth gathering he hath face morning fill. Living so second darkness. Moveth were male. May creepeth. Be tree fourth.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="nk-gallery-item-box">
-                            <a href="home/images/gallery-2.jpg" class="nk-gallery-item" data-size="1188x594">
-                                <div class="nk-gallery-item-overlay"><span class="ion-eye"></span></div>
-                                <img src="home/images/gallery-2-thumb.jpg" alt="">
-                            </a>
-                            <div class="nk-gallery-item-description">
-                                Seed open don't thing midst created dry every greater divided of, be man is. Second Bring stars fourth gathering he hath face morning fill. Living so second darkness. Moveth were male. May creepeth. Be tree fourth.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="nk-gallery-item-box">
-                            <a href="home/images/gallery-3.jpg" class="nk-gallery-item" data-size="625x350">
-                                <div class="nk-gallery-item-overlay"><span class="ion-eye"></span></div>
-                                <img src="home/images/gallery-3-thumb.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="nk-gallery-item-box">
-                            <a href="home/images/gallery-4.jpg" class="nk-gallery-item" data-size="873x567">
-                                <div class="nk-gallery-item-overlay"><span class="ion-eye"></span></div>
-                                <img src="home/images/gallery-4-thumb.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="nk-gallery-item-box">
-                            <a href="home/images/gallery-5.jpg" class="nk-gallery-item" data-size="471x269">
-                                <div class="nk-gallery-item-overlay"><span class="ion-eye"></span></div>
-                                <img src="home/images/gallery-5-thumb.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="nk-gallery-item-box">
-                            <a href="home/images/gallery-6.jpg" class="nk-gallery-item" data-size="472x438">
-                                <div class="nk-gallery-item-overlay"><span class="ion-eye"></span></div>
-                                <img src="home/images/gallery-6-thumb.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- END: Latest Pictures -->
-
-            <!-- START: Best Selling -->
-            <div class="nk-gap-3"></div>
-            <h3 class="nk-decorated-h-2"><span><span class="text-main-1">Best</span> Selling</span></h3>
-            <div class="nk-gap"></div>
-            <div class="row vertical-gap">
-                
-                
-                <div class="col-md-6">
-                    <div class="nk-product-cat">
-                        <a class="nk-product-image" href="store-product.html">
-                            <img src="home/images/product-11-xs.jpg" alt="She gave my mother">
-                        </a>
-                        <div class="nk-product-cont">
-                            <h3 class="nk-product-title h5"><a href="store-product.html">She gave my mother</a></h3>
-                            <div class="nk-gap-1"></div>
-                            <div class="nk-product-rating" data-rating="3"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i></div>
-                            <div class="nk-gap-1"></div>
-                            <div class="nk-product-price">€ 14.00</div>
-                            <div class="nk-gap-1"></div>
-                            <a href="#" class="nk-btn nk-btn-rounded nk-btn-color-dark-3 nk-btn-hover-color-main-1">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                <div class="col-md-6">
-                    <div class="nk-product-cat">
-                        <a class="nk-product-image" href="store-product.html">
-                            <img src="home/images/product-12-xs.jpg" alt="A hundred thousand">
-                        </a>
-                        <div class="nk-product-cont">
-                            <h3 class="nk-product-title h5"><a href="store-product.html">A hundred thousand</a></h3>
-                            <div class="nk-gap-1"></div>
-                            <div class="nk-product-rating" data-rating="4.5"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fas fa-star-half"></i></div>
-                            <div class="nk-gap-1"></div>
-                            <div class="nk-product-price">€ 20.00</div>
-                            <div class="nk-gap-1"></div>
-                            <a href="#" class="nk-btn nk-btn-rounded nk-btn-color-dark-3 nk-btn-hover-color-main-1">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                <div class="col-md-6">
-                    <div class="nk-product-cat">
-                        <a class="nk-product-image" href="store-product.html">
-                            <img src="home/images/product-13-xs.jpg" alt="So saying he unbuckled">
-                        </a>
-                        <div class="nk-product-cont">
-                            <h3 class="nk-product-title h5"><a href="store-product.html">So saying he unbuckled</a></h3>
-                            <div class="nk-gap-1"></div>
-                            <div class="nk-product-rating" data-rating="5"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
-                            <div class="nk-gap-1"></div>
-                            <div class="nk-product-price">€ 23.00</div>
-                            <div class="nk-gap-1"></div>
-                            <a href="#" class="nk-btn nk-btn-rounded nk-btn-color-dark-3 nk-btn-hover-color-main-1">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                <div class="col-md-6">
-                    <div class="nk-product-cat">
-                        <a class="nk-product-image" href="store-product.html">
-                            <img src="home/images/product-14-xs.jpg" alt="However, I have reason">
-                        </a>
-                        <div class="nk-product-cont">
-                            <h3 class="nk-product-title h5"><a href="store-product.html">However, I have reason</a></h3>
-                            <div class="nk-gap-1"></div>
-                            <div class="nk-product-rating" data-rating="1.5"> <i class="fa fa-star"></i> <i class="fas fa-star-half"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i></div>
-                            <div class="nk-gap-1"></div>
-                            <div class="nk-product-price">€ 32.00</div>
-                            <div class="nk-gap-1"></div>
-                            <a href="#" class="nk-btn nk-btn-rounded nk-btn-color-dark-3 nk-btn-hover-color-main-1">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            <!-- END: Best Selling -->
-        </div>
-        <div class="col-lg-4">
-            <!--
-                START: Sidebar
-
-                Additional Classes:
-                    .nk-sidebar-left
-                    .nk-sidebar-right
-                    .nk-sidebar-sticky
-            -->
-            <aside class="nk-sidebar nk-sidebar-right nk-sidebar-sticky">
-                <div class="nk-widget">
-    <div class="nk-widget-content">
-        <form action="#" class="nk-form nk-form-style-1" novalidate="novalidate">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Type something...">
-                <button class="nk-btn nk-btn-color-main-1"><span class="ion-search"></span></button>
-            </div>
-        </form>
-    </div>
-</div>
-<div class="nk-widget nk-widget-highlighted">
-    <h4 class="nk-widget-title"><span><span class="text-main-1">We</span> Are Social</span></h4>
-    <div class="nk-widget-content">
-
-        <ul class="nk-social-links-3 nk-social-links-cols-4">
-            <li><a class="nk-social-twitch" href="#"><span class="fab fa-twitch"></span></a></li>
-            <li><a class="nk-social-instagram" href="#"><span class="fab fa-instagram"></span></a></li>
-            <li><a class="nk-social-facebook" href="#"><span class="fab fa-facebook"></span></a></li>
-            <li><a class="nk-social-google-plus" href="#"><span class="fab fa-google-plus"></span></a></li>
-            <li><a class="nk-social-youtube" href="#"><span class="fab fa-youtube"></span></a></li>
-            <li><a class="nk-social-twitter" href="https://twitter.com/" target="_blank"><span class="fab fa-twitter"></span></a></li>
-            <li><a class="nk-social-pinterest" href="#"><span class="fab fa-pinterest-p"></span></a></li>
-            <li><a class="nk-social-rss" href="#"><span class="fa fa-rss"></span></a></li>
-
-        
-        </ul>
-    </div>
-</div>
-<div class="nk-widget nk-widget-highlighted">
-    <h4 class="nk-widget-title"><span><span class="text-main-1">Latest</span> Video</span></h4>
-    <div class="nk-widget-content">
-        <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=vXy8UBazlO8"></div>
-    </div>
-</div>
-<div class="nk-widget nk-widget-highlighted">
-    <h4 class="nk-widget-title"><span><span class="text-main-1">Recent</span> Winners</span></h4>
-    <div class="nk-widget-content">
-            @foreach($results as $results)
-            <div class="nk-widget-post">
-                <span class="nk-post-image">
-                         <span class="nk-match-score bg-danger">
-                            {{ $results->winning_number}}
-                        </span> 
-                </span>
-                <h3 class="nk-post-title"><a href="blog-article.html">{{ $results->name }}</a></h3>
-                <div class="nk-post-date"><span class="fa fa-calendar"></span>{{ date( 'F d, Y',strtotime($results->created_at)) }}</div>
-            </div>
-            @endforeach
-    </div>
-</div>
-<div class="nk-widget nk-widget-highlighted">
-    <h4 class="nk-widget-title"><span><span class="text-main-1">PAYMENTS WE</span> ACCEPT</span></h4>
-    <div class="nk-widget-content">
-        <div class="nk-popup-gallery">
-            <div class="row sm-gap vertical-gap">
-                <div class="col-sm-6">
-                    <div class="nk-gallery-item-box">
-                            <img src="home/images/btc.png" alt="">
-                    </div>
-                </div>
-              
-                    <div class="col-sm-6">
-                    <div class="nk-gallery-item-box">
-                            <img src="home/images/eth.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="nk-widget nk-widget-highlighted">
-    <h4 class="nk-widget-title"><span><span class="text-main-1">Next</span> Matches</span></h4>
-    <div class="nk-widget-content">
-        <div class="nk-widget-match">
-            <a href="#">
-                <span class="nk-widget-match-left">
-                    <span class="nk-widget-match-teams">
-                        <span class="nk-widget-match-team-logo">
-                            <img src="home/images/team-1.jpg" alt="">
-                        </span>
-                        <span class="nk-widget-match-vs">VS</span>
-                        <span class="nk-widget-match-team-logo">
-                            <img src="home/images/team-2.jpg" alt="">
-                        </span>
-                    </span>
-                    <span class="nk-widget-match-date">CS:GO - Apr 28, 2018 8:00 pm</span>
-                </span>
-                <span class="nk-widget-match-right">
-                    <span class="nk-match-score">
-                        Upcoming
-                    </span>
-                </span>
-            </a>
-        </div>
-
-        <div class="nk-widget-match">
-            <a href="#">
-                <span class="nk-widget-match-left">
-                    <span class="nk-widget-match-teams">
-                        <span class="nk-widget-match-team-logo">
-                            <img src="home/images/team-3.jpg" alt="">
-                        </span>
-                        <span class="nk-widget-match-vs">VS</span>
-                        <span class="nk-widget-match-team-logo">
-                            <img src="home/images/team-2.jpg" alt="">
-                        </span>
-                    </span>
-                    <span class="nk-widget-match-date">LoL - Apr 24, 2018 7:20 pm</span>
-                </span>
-                <span class="nk-widget-match-right">
-                    <span class="nk-match-score">
-                        Upcoming
-                    </span>
-                </span>
-            </a>
-        </div>
-
-        <div class="nk-widget-match">
-            <a href="#">
-                <span class="nk-widget-match-left">
-                    <span class="nk-widget-match-teams">
-                        <span class="nk-widget-match-team-logo">
-                            <img src="home/images/team-1.jpg" alt="">
-                        </span>
-                        <span class="nk-widget-match-vs">VS</span>
-                        <span class="nk-widget-match-team-logo">
-                            <img src="home/images/team-4.jpg" alt="">
-                        </span>
-                    </span>
-                    <span class="nk-widget-match-date">Dota 2 - Apr 12, 2018 6:40 pm</span>
-                </span>
-                <span class="nk-widget-match-right">
-                    <span class="nk-match-score bg-dark-1">
-                        0 : 0
-                    </span>
-                </span>
-            </a>
-        </div>
-    </div>
-</div>
-{{-- <div class="nk-widget nk-widget-highlighted">
-    <h4 class="nk-widget-title"><span><span class="text-main-1">Most</span> Popular</span></h4>
-    <div class="nk-widget-content">
-            <div class="nk-widget-post">
-                <a href="store-product.html" class="nk-post-image">
-                    <img src="home/images/product-1-xs.jpg" alt="So saying he unbuckled">
-                </a>
-                <h3 class="nk-post-title"><a href="store-product.html">So saying he unbuckled</a></h3>
-                <div class="nk-product-rating" data-rating="4"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="far fa-star"></i></div>
-                <div class="nk-product-price">€ 23.00</div>
-            </div>
-            <div class="nk-widget-post">
-                <a href="store-product.html" class="nk-post-image">
-                    <img src="home/images/product-2-xs.jpg" alt="However, I have reason">
-                </a>
-                <h3 class="nk-post-title"><a href="store-product.html">However, I have reason</a></h3>
-                <div class="nk-product-rating" data-rating="2.5"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fas fa-star-half"></i> <i class="far fa-star"></i> <i class="far fa-star"></i></div>
-                <div class="nk-product-price">€ 32.00</div>
-            </div>
-            <div class="nk-widget-post">
-                <a href="store-product.html" class="nk-post-image">
-                    <img src="home/images/product-3-xs.jpg" alt="It was some time before">
-                </a>
-                <h3 class="nk-post-title"><a href="store-product.html">It was some time before</a></h3>
-                <div class="nk-product-rating" data-rating="5"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
-                <div class="nk-product-price">€ 14.00</div>
-            </div>
-    </div>
-</div> --}}
-
-            </aside>
-            <!-- END: Sidebar -->
-        </div>
-    </div>
-</div>
-
-<div class="nk-gap-4"></div>
-
-
-        
-            <!-- START: Footer -->
-<footer class="nk-footer">
-
-    <div class="container">
-        <div class="nk-gap-3"></div>
-        <div class="row vertical-gap">
-            <div class="col-md-6">
-                <div class="nk-widget">
-                    <h4 class="nk-widget-title"><span class="text-main-1">Contact</span> With Us</h4>
-                    <div class="nk-widget-content">
-                        <form action="php/ajax-contact-form.php" class="nk-form nk-form-ajax">
-                            <div class="row vertical-gap sm-gap">
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control required" name="email" placeholder="Email *">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control required" name="name" placeholder="Name *">
-                                </div>
-                            </div>
-                            <div class="nk-gap"></div>
-                            <textarea class="form-control required" name="message" rows="5" placeholder="Message *"></textarea>
-                            <div class="nk-gap-1"></div>
-                            <button class="nk-btn nk-btn-rounded nk-btn-color-white">
-                                <span>Send</span>
-                                <span class="icon"><i class="ion-paper-airplane"></i></span>
-                            </button>
-                            <div class="nk-form-response-success"></div>
-                            <div class="nk-form-response-error"></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="nk-widget">
-                    <h4 class="nk-widget-title"><span class="text-main-1">Latest</span> Posts</h4>
-                    <div class="nk-widget-content">
-                        <div class="row vertical-gap sm-gap">
-                            
-                            <div class="col-lg-6">
-                                <div class="nk-widget-post-2">
-                                    <a href="blog-article.html" class="nk-post-image">
-                                        <img src="home/images/post-1-sm.jpg" alt="">
-                                    </a>
-                                    <div class="nk-post-title"><a href="blog-article.html">Smell magic in the air. Or maybe barbecue</a></div>
-                                    <div class="nk-post-date">
-                                        <span class="fa fa-calendar"></span> Sep 18, 2018
-                                        <span class="fa fa-comments"></span> <a href="#">4</a>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-lg-6">
-                                <div class="nk-widget-post-2">
-                                    <a href="blog-article.html" class="nk-post-image">
-                                        <img src="home/images/post-2-sm.jpg" alt="">
-                                    </a>
-                                    <div class="nk-post-title"><a href="blog-article.html">Grab your sword and fight the Horde</a></div>
-                                    <div class="nk-post-date">
-                                        <span class="fa fa-calendar"></span> Sep 5, 2018
-                                        <span class="fa fa-comments"></span> <a href="#">7</a>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="nk-widget">
-                    <h4 class="nk-widget-title"><span class="text-main-1">In</span> Twitter</h4>
-                    <div class="nk-widget-content">
-                        <div class="nk-twitter-list" data-twitter-count="1"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="nk-gap-3"></div>
-    </div>
-
-    <div class="nk-copyright">
-        <div class="container">
-            <div class="nk-copyright-left">
-                Copyright &copy; 2018 <a href="https://themeforest.net/user/_nk?ref=_nK" target="_blank">nK</a>
-            </div>
-            <div class="nk-copyright-right">
-                <ul class="nk-social-links-2">
-                    <li><a class="nk-social-rss" href="#"><span class="fa fa-rss"></span></a></li>
-                    <li><a class="nk-social-twitch" href="#"><span class="fab fa-twitch"></span></a></li>
-                    <li><a class="nk-social-steam" href="#"><span class="fab fa-steam"></span></a></li>
-                    <li><a class="nk-social-facebook" href="#"><span class="fab fa-facebook"></span></a></li>
-                    <li><a class="nk-social-google-plus" href="#"><span class="fab fa-google-plus"></span></a></li>
-                    <li><a class="nk-social-twitter" href="https://twitter.com/nkdevv" target="_blank"><span class="fab fa-twitter"></span></a></li>
-                    <li><a class="nk-social-pinterest" href="#"><span class="fab fa-pinterest-p"></span></a></li>
-
-                    <!-- Additional Social Buttons
-                        <li><a class="nk-social-behance" href="#"><span class="fab fa-behance"></span></a></li>
-                        <li><a class="nk-social-bitbucket" href="#"><span class="fab fa-bitbucket"></span></a></li>
-                        <li><a class="nk-social-dropbox" href="#"><span class="fab fa-dropbox"></span></a></li>
-                        <li><a class="nk-social-dribbble" href="#"><span class="fab fa-dribbble"></span></a></li>
-                        <li><a class="nk-social-deviantart" href="#"><span class="fab fa-deviantart"></span></a></li>
-                        <li><a class="nk-social-flickr" href="#"><span class="fab fa-flickr"></span></a></li>
-                        <li><a class="nk-social-foursquare" href="#"><span class="fab fa-foursquare"></span></a></li>
-                        <li><a class="nk-social-github" href="#"><span class="fab fa-github"></span></a></li>
-                        <li><a class="nk-social-instagram" href="#"><span class="fab fa-instagram"></span></a></li>
-                        <li><a class="nk-social-linkedin" href="#"><span class="fab fa-linkedin"></span></a></li>
-                        <li><a class="nk-social-medium" href="#"><span class="fab fa-medium"></span></a></li>
-                        <li><a class="nk-social-odnoklassniki" href="#"><span class="fab fa-odnoklassniki"></span></a></li>
-                        <li><a class="nk-social-paypal" href="#"><span class="fab fa-paypal"></span></a></li>
-                        <li><a class="nk-social-reddit" href="#"><span class="fab fa-reddit"></span></a></li>
-                        <li><a class="nk-social-skype" href="#"><span class="fab fa-skype"></span></a></li>
-                        <li><a class="nk-social-soundcloud" href="#"><span class="fab fa-soundcloud"></span></a></li>
-                        <li><a class="nk-social-slack" href="#"><span class="fab fa-slack"></span></a></li>
-                        <li><a class="nk-social-tumblr" href="#"><span class="fab fa-tumblr"></span></a></li>
-                        <li><a class="nk-social-vimeo" href="#"><span class="fab fa-vimeo"></span></a></li>
-                        <li><a class="nk-social-vk" href="#"><span class="fab fa-vk"></span></a></li>
-                        <li><a class="nk-social-wordpress" href="#"><span class="fab fa-wordpress"></span></a></li>
-                        <li><a class="nk-social-youtube" href="#"><span class="fab fa-youtube"></span></a></li>
-                    -->
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- END: Footer -->
-
-        
-    </div>
-
-    
-
-    
-        <!-- START: Page Background -->
-
-    <img class="nk-page-background-top" src="home/images/bg-top.png" alt="">
-    <img class="nk-page-background-bottom" src="home/images/bg-bottom.png" alt="">
-
-<!-- END: Page Background -->
-
-    
-
-    
-        <!-- START: Search Modal -->
-<div class="nk-modal modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span class="ion-android-close"></span>
-                </button>
-
-                <h4 class="mb-0">Search</h4>
-
-                <div class="nk-gap-1"></div>
-                <form action="#" class="nk-form nk-form-style-1">
-                    <input type="text" value="" name="search" class="form-control" placeholder="Type something and press Enter" autofocus>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- END: Search Modal -->
-    
-
-    
-        <!-- START: Login Modal -->
-<div class="nk-modal modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span class="ion-android-close"></span>
-                </button>
-
-                <h4 class="mb-0"><span class="text-main-1">Sign</span> In</h4>
-
-                <div class="nk-gap-1"></div>
-                <form action="#" class="nk-form text-white">
-                    <div class="row vertical-gap">
-                        <div class="col-md-6">
-                            Use email and password:
-
-                            <div class="nk-gap"></div>
-                            <input type="email" value="" name="email" class=" form-control" placeholder="Email">
-
-                            <div class="nk-gap"></div>
-                            <input type="password" value="" name="password" class="required form-control" placeholder="Password">
-                        </div>
-                        <div class="col-md-6">
-                            Or social account:
-
-                            <div class="nk-gap"></div>
-
-                            <ul class="nk-social-links-2">
-                                <li><a class="nk-social-facebook" href="#"><span class="fab fa-facebook"></span></a></li>
-                                <li><a class="nk-social-google-plus" href="#"><span class="fab fa-google-plus"></span></a></li>
-                                <li><a class="nk-social-twitter" href="#"><span class="fab fa-twitter"></span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="nk-gap-1"></div>
-                    <div class="row vertical-gap">
-                        <div class="col-md-6">
-                            <a href="#" class="nk-btn nk-btn-rounded nk-btn-color-white nk-btn-block">Sign In</a>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="mnt-5">
-                                <small><a href="#">Forgot your password?</a></small>
-                            </div>
-                            <div class="mnt-5">
-                                <small><a href="#">Not a member? Sign up</a></small>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- END: Login Modal -->
-
-    
-
-    <iframe width="0" height="0" src="https://www.youtube.com/embed/J-5-BAkVrNo?rel=0&autoplay=1"
-frameborder="0" allowfullscreen></iframe>
-<!-- START: Scripts -->
-
-<!-- Object Fit Polyfill -->
-<script src="home/vendor/object-fit-images/dist/ofi.min.js"></script>
-
-<!-- GSAP -->
-<script src="home/vendor/gsap/src/minified/TweenMax.min.js"></script>
-<script src="home/vendor/gsap/src/minified/plugins/ScrollToPlugin.min.js"></script>
-
-<!-- Popper -->
-<script src="home/vendor/popper.js/dist/umd/popper.min.js"></script>
-
-<!-- Bootstrap -->
-<script src="home/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-
-<!-- Sticky Kit -->
-<script src="home/vendor/sticky-kit/dist/sticky-kit.min.js"></script>
-
-<!-- Jarallax -->
-<script src="home/vendor/jarallax/dist/jarallax.min.js"></script>
-<script src="home/vendor/jarallax/dist/jarallax-video.min.js"></script>
-
-<!-- imagesLoaded -->
-<script src="home/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-
-<!-- Flickity -->
-<script src="home/vendor/flickity/dist/flickity.pkgd.min.js"></script>
-
-<!-- Photoswipe -->
-<script src="home/vendor/photoswipe/dist/photoswipe.min.js"></script>
-<script src="home/vendor/photoswipe/dist/photoswipe-ui-default.min.js"></script>
-
-<!-- Jquery Validation -->
-<script src="home/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
-
-<!-- Jquery Countdown + Moment -->
-<script src="home/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
-<script src="home/vendor/moment/min/moment.min.js"></script>
-<script src="home/vendor/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
-
-<!-- Hammer.js -->
-<script src="home/vendor/hammerjs/hammer.min.js"></script>
-
-<!-- NanoSroller -->
-<script src="home/vendor/nanoscroller/bin/javascripts/jquery.nanoscroller.js"></script>
-
-<!-- SoundManager2 -->
-<script src="home/vendor/soundmanager2/script/soundmanager2-nodebug-jsmin.js"></script>
-
-<!-- Seiyria Bootstrap Slider -->
-<script src="home/vendor/bootstrap-slider/dist/bootstrap-slider.min.js"></script>
-
-<!-- Summernote -->
-<script src="home/vendor/summernote/dist/summernote-bs4.min.js"></script>
-
-<!-- nK Share -->
-<script src="home/plugins/nk-share/nk-share.js"></script>
-
-<!-- GoodGames -->
-<script src="home/js/goodgames.min.js"></script>
-<script src="home/js/goodgames-init.js"></script>
-<!-- END: Scripts -->
-
-<script type="text/javascript">
-			var clock;
-
-			$(document).ready(function() {
-
-				// Grab the current date
-				var currentDate = new Date();
-
-				// Set some date in the future. In this case, it's always Jan 1
-				var futureDate  = new Date('2018-12-30');
-
-				// Calculate the difference in seconds between the future and current date
-				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
-
-				// Instantiate a coutdown FlipClock
-				clock = $('.clock').FlipClock(diff, {
-					clockFace: 'DailyCounter',
-					countdown: true
-				});
-			});
-		</script>
-    
+<body class="template-esports">
+
+	<div class="site-wrapper clearfix">
+		<div class="site-overlay"></div>
+
+		<!-- Header
+		================================================== -->
+
+		<!-- Header Mobile -->
+		<div class="header-mobile clearfix" id="header-mobile">
+			<div class="header-mobile__logo">
+				<a href=""><img src="{{ asset('assets/images/esports/logo.png')}}" srcset="{{ asset('assets/images/esports/logo@2x.png')}}"  alt="XINROX" class="header-mobile__logo-img"></a>
+			</div>
+			<div class="header-mobile__inner">
+				<a id="header-mobile__toggle" class="burger-menu-icon"><span class="burger-menu-icon__line"></span></a>
+				<span class="header-mobile__search-icon" id="header-mobile__search-icon"></span>
+			</div>
+		</div>
+		<!-- Header Mobile / End -->
+
+		<!-- Header Desktop -->
+		<header class="header header--layout-3">
+
+			<!-- Header Top Bar -->
+			<div class="header__top-bar clearfix">
+				<div class="container">
+					<div class="header__top-bar-inner">
+
+						<!-- Social Links -->
+						<ul class="social-links social-links--inline social-links--main-nav social-links--top-bar">
+							<li class="social-links__item">
+								<a href="#" class="social-links__link" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa fa-facebook-square"></i></a>
+							</li>
+							<li class="social-links__item">
+								<a href="#" class="social-links__link" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa fa-twitter"></i></a>
+							</li>
+							<li class="social-links__item">
+								<a href="#" class="social-links__link" data-toggle="tooltip" data-placement="bottom" title="Twitch"><i class="fa fa fa-twitch"></i></a>
+							</li>
+							<li class="social-links__item">
+								<a href="#" class="social-links__link" data-toggle="tooltip" data-placement="bottom" title="YouTube"><i class="fa fa fa-youtube-play"></i></a>
+							</li>
+							<li class="social-links__item">
+								<a href="#" class="social-links__link" data-toggle="tooltip" data-placement="bottom" title="Google+"><i class="fa fa fa-google-plus"></i></a>
+							</li>
+							<li class="social-links__item">
+								<a href="#" class="social-links__link" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa fa-instagram"></i></a>
+							</li>
+						</ul>
+						<!-- Social Links / End -->
+
+						<!-- Account Navigation -->
+						<ul class="nav-account">
+							<li class="nav-account__item nav-account__item--wishlist"><a href="_esports_shop-wishlist.html">Wishlist <span class="highlight">8</span></a></li>
+							<li class="nav-account__item"><a href="#">Currency: <span class="highlight">USD</span></a>
+								<ul class="main-nav__sub">
+									<li><a href="#">USD</a></li>
+									<li><a href="#">EUR</a></li>
+									<li><a href="#">GBP</a></li>
+								</ul>
+							</li>
+							<li class="nav-account__item"><a href="#">Language: <span class="highlight">EN</span></a>
+								<ul class="main-nav__sub">
+									<li><a href="#">English</a></li>
+									<li><a href="#">Spanish</a></li>
+									<li><a href="#">French</a></li>
+									<li><a href="#">German</a></li>
+								</ul>
+							</li>
+							<li class="nav-account__item"><a href="_esports_shop-account.html">Your Account</a></li>
+							<li class="nav-account__item nav-account__item--logout"><a href="_esports_shop-login.html">Logout</a></li>
+						</ul>
+						<!-- Account Navigation / End -->
+					</div>
+				</div>
+			</div>
+			<!-- Header Top Bar / End -->
+
+			<!-- Header Primary -->
+			<div class="header__primary">
+				<div class="container">
+					<div class="header__primary-inner">
+
+						<!-- Header Logo -->
+						<div class="header-logo">
+							<a href="_esports_index.html"><img src="{{ asset('assets/images/esports/logo.png')}}" srcset="{{ asset('assets/images/esports/logo@2x.png 2x')}}" alt="Alchemists" class="header-logo__img"></a>
+						</div>
+						<!-- Header Logo / End -->
+
+						<!-- Main Navigation -->
+						<nav class="main-nav">
+							<ul class="main-nav__list">
+								<li class="active"><a href="_esports_index.html">Home</a>
+									<ul class="main-nav__sub">
+
+										<li class="active"><a href="{{ URL::to('/')}}">Home Page</a></li>
+									</ul>
+								</li>
+
+								<li class=""><a href="_esports_team-overview.html">Result</a>
+									</li>
+								<li class="">
+									<a href="_esports_shop-fullwidth.html">Account</a>
+
+								</li>
+
+
+							</ul>
+						</nav>
+						<!-- Main Navigation / End -->
+
+						<div class="header__primary-spacer"></div>
+
+						<!-- Header Search Form -->
+						<div class="header-search-form ">
+							<form action="#" id="mobile-search-form" class="search-form">
+								<input type="text" class="form-control header-mobile__search-control" value="" placeholder="Enter your search here...">
+								<button type="submit" class="header-mobile__search-submit"><i class="fa fa-search"></i></button>
+							</form>
+						</div>
+						<!-- Header Search Form / End -->
+
+						<!-- Header Info Block -->
+						<ul class="info-block info-block--header">
+
+							<li class="info-block__item info-block__item--shopping-cart js-info-block__item--onclick">
+								<a href="_esports_shop-cart.html" class="info-block__link-wrapper">
+									<svg role="img" class="df-icon df-icon--shopping-cart">
+										<use xlink:href="{{ asset('assets/images/esports/icons-esports.svg#cart')}}"/>
+									</svg>
+									<h6 class="info-block__heading">Your Bag (8 items)</h6>
+									<span class="info-block__cart-sum">$256,30</span>
+								</a>
+
+								<!-- Dropdown Shopping Cart -->
+								<ul class="header-cart header-cart--inventory">
+
+									<li class="header-cart__item header-cart__item--title">
+										<h5>Bag Inventory</h5>
+									</li>
+
+									<li class="header-cart__item">
+										<figure class="header-cart__product-thumb">
+											<a href="_esports_shop-product.html">
+												<img src="{{ asset('assets/images/esports/samples/cart-sm-1.jpg')}}" alt="Jaxxy Framed Art Print">
+											</a>
+										</figure>
+										<div class="header-cart__badges">
+											<span class="badge badge-primary">2</span>
+											<span class="badge badge-default badge-close"><i class="fa fa-times"></i></span>
+										</div>
+									</li>
+									<li class="header-cart__item">
+										<figure class="header-cart__product-thumb">
+											<a href="_esports_shop-product.html">
+												<img src="{{ asset('assets/images/esports/samples/cart-sm-2.jpg')}}" alt="Tech Warrior Framed Art Print">
+											</a>
+										</figure>
+										<div class="header-cart__badges">
+											<span class="badge badge-primary">4</span>
+											<span class="badge badge-default badge-close"><i class="fa fa-times"></i></span>
+										</div>
+									</li>
+									<li class="header-cart__item">
+										<figure class="header-cart__product-thumb">
+											<a href="_esports_shop-product.html">
+												<img src="{{ asset('assets/images/esports/samples/cart-sm-3.jpg')}}" alt="Alchemists White Mug">
+											</a>
+										</figure>
+										<div class="header-cart__badges">
+											<span class="badge badge-default badge-close"><i class="fa fa-times"></i></span>
+										</div>
+									</li>
+									<li class="header-cart__item">
+										<figure class="header-cart__product-thumb">
+											<a href="_esports_shop-product.html">
+												<img src="{{ asset('assets/images/esports/samples/cart-sm-4.jpg')}}" alt="Mercenaries Framed Art Print">
+											</a>
+										</figure>
+										<div class="header-cart__badges">
+											<span class="badge badge-default badge-close"><i class="fa fa-times"></i></span>
+										</div>
+									</li>
+
+									<li class="header-cart__item">
+										<figure class="header-cart__product-thumb"></figure>
+									</li>
+									<li class="header-cart__item">
+										<figure class="header-cart__product-thumb"></figure>
+									</li>
+									<li class="header-cart__item">
+										<figure class="header-cart__product-thumb"></figure>
+									</li>
+									<li class="header-cart__item">
+										<figure class="header-cart__product-thumb"></figure>
+									</li>
+									<li class="header-cart__item">
+										<figure class="header-cart__product-thumb"></figure>
+									</li>
+
+									<li class="header-cart__item header-cart__item--subtotal">
+										<span class="header-cart__subtotal">Inventory Subtotal</span>
+										<span class="header-cart__subtotal-sum">$256.30</span>
+									</li>
+									<li class="header-cart__item header-cart__item--action">
+										<a href="_esports_shop-cart.html" class="btn btn-primary-inverse btn-block">Go to Shopping Cart</a>
+										<a href="_esports_shop-checkout.html" class="btn btn-primary btn-block">Proceed to Checkout</a>
+									</li>
+								</ul>
+								<!-- Dropdown Shopping Cart / End -->
+
+							</li>
+						</ul>
+						<!-- Header Info Block / End -->
+
+					</div>
+				</div>
+			</div>
+			<!-- Header Primary / End -->
+
+		</header>
+		<!-- Header / End -->
+
+		<!-- Header Posts
+		================================================== -->
+		<div class="container">
+			<div class="posts posts--tile posts--tile-alt post-grid posts--tile-alt-nopaddings posts--tile-hero-post-grid posts--tile-meta-position js-hero-post-grid-masonry row">
+
+				<div class="post-grid__sizer col-12 col-sm-6 col-md-6 col-lg-3"></div>
+
+				<div class="post-grid__item col-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="posts__item posts__item--tile posts__item--category-2 ">
+						<figure class="posts__thumb">
+							<img src="{{ asset('assets/images/esports/samples/post-img2-grid.png')}}" alt="">
+							<div class="posts__inner">
+								<div class="posts__cat">
+									<span class="label posts__cat-label posts__cat-label--category-2">HOT PRIZE</span>
+								</div>
+								<h6 class="posts__title posts__title--lg posts__title--color-hover"><a href="_esports_blog-post-1.html">GET A CHANCE TO WIN AUDI A8 </a></h6>
+								<time datetime="2018-08-23" class="posts__date">October 24th, 2019</time>
+								<ul class="post__meta meta">
+									<li class="meta__item meta__item--views">2369</li>
+									<li class="meta__item meta__item--likes"><a href="#"><i class="meta-like icon-heart"></i> 530</a></li>
+									<li class="meta__item meta__item--comments"><a href="#">18</a></li>
+								</ul>
+							</div>
+						</figure>
+						<!-- <a href="_esports_blog-post-1.html" class="posts__cta"></a> -->
+					</div>
+				</div>
+				<div class="post-grid__item col-12 col-sm-6 col-md-6 col-lg-3">
+					<div class="posts__item posts__item--tile posts__item--category-1 posts__item--category-4 ">
+						<figure class="posts__thumb">
+							<img src="{{ asset('assets/images/esports/samples/post-img9-grid.jpg')}}" alt="">
+							<div class="posts__inner">
+								<div class="posts__cat">
+									<span class="label posts__cat-label posts__cat-label--category-1">Macbook Air</span><span class="label posts__cat-label posts__cat-label--category-4">Macbook Pro</span>
+								</div>
+								<h6 class="posts__title  posts__title--color-hover"><a href="_esports_blog-post-1.html">10 Macbooks will be given to lucky winners </a></h6>
+								<time datetime="2018-08-23" class="posts__date">August 27th, 2019</time>
+								<ul class="post__meta meta">
+									<li class="meta__item meta__item--views">2369</li>
+									<li class="meta__item meta__item--likes"><a href="#"><i class="meta-like icon-heart"></i> 530</a></li>
+									<li class="meta__item meta__item--comments"><a href="#">18</a></li>
+								</ul>
+							</div>
+						</figure>
+						<!-- <a href="_esports_blog-post-1.html" class="posts__cta"></a> -->
+					</div>
+				</div>
+				<div class="post-grid__item col-12 col-sm-6 col-md-6 col-lg-3">
+					<div class="posts__item posts__item--tile posts__item--category-2 ">
+						<figure class="posts__thumb">
+							<img src="{{ asset('assets/images/esports/samples/post-img10-grid.jpg')}}" alt="">
+							<div class="posts__inner">
+								<div class="posts__cat">
+									<span class="label posts__cat-label posts__cat-label--category-2">Awesome Deal</span>
+								</div>
+								<h6 class="posts__title  posts__title--color-hover"><a href="_esports_blog-post-1.html">Get a chance to own your dream house and lot</a></h6>
+								<time datetime="2018-08-23" class="posts__date">December 16th, 2019</time>
+								<ul class="post__meta meta">
+									<li class="meta__item meta__item--views">2369</li>
+									<li class="meta__item meta__item--likes"><a href="#"><i class="meta-like icon-heart"></i> 530</a></li>
+									<li class="meta__item meta__item--comments"><a href="#">18</a></li>
+								</ul>
+							</div>
+						</figure>
+						<!-- <a href="_esports_blog-post-1.html" class="posts__cta"></a> -->
+					</div>
+				</div>
+				<div class="post-grid__item col-12 col-sm-6 col-md-6 col-lg-6">
+					<div class="posts__item posts__item--tile posts__item--category-3 ">
+						<figure class="posts__thumb">
+							<img src="{{ asset('assets/images/esports/samples/post-img15-grid.jpg')}}" alt="">
+							<div class="posts__inner">
+								<div class="posts__cat">
+									<span class="label posts__cat-label posts__cat-label--category-3">TRAVEL GOALS</span>
+								</div>
+								<h6 class="posts__title  posts__title--color-hover"><a href="_esports_blog-post-1.html">WIN A HONGKONG TRIP FOR 2</a></h6>
+								<time datetime="2018-08-23" class="posts__date">July 3rd, 2019</time>
+								<ul class="post__meta meta">
+									<li class="meta__item meta__item--views">2369</li>
+									<li class="meta__item meta__item--likes"><a href="#"><i class="meta-like icon-heart"></i> 530</a></li>
+									<li class="meta__item meta__item--comments"><a href="#">18</a></li>
+								</ul>
+							</div>
+						</figure>
+						<a href="_esports_blog-post-1.html" class="posts__cta"></a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- Content
+		================================================== -->
+		<div class="site-content">
+			<div class="container">
+
+				<!-- Breaking News -->
+				<div class="marquee-wrapper marquee-wrapper--boxed">
+					<div class="container">
+
+						<div class="marquee-label">
+							<i class="fa fa-star"></i> Breaking News
+						</div>
+						<div class="marquee" data-startvisible="true" data-duration="18000" data-gap="10" data-duplicated="true">
+							<ul class="posts posts--inline">
+								<li class="posts__item posts__item--category-4 ">
+									<div class="posts__cat">
+										<span class="label posts__cat-label posts__cat-label--category-4">Xenowatch</span>
+									</div>
+									<h6 class="posts__title posts__title--color-hover"><a href="_esports_blog-post-1.html">Shadow&#x27;s Ability will receive a nerf on May</a></h6>
+									<div class="posts__excerpt">Due to multiple player complaints...</div>
+								</li>
+								<li class="posts__item posts__item--category-1 ">
+									<div class="posts__cat">
+										<span class="label posts__cat-label posts__cat-label--category-1">The Team</span>
+									</div>
+									<h6 class="posts__title posts__title--color-hover"><a href="_esports_blog-post-1.html">The team uniforms are getting a revamped</a></h6>
+									<div class="posts__excerpt">After several years, the uniforms...</div>
+								</li>
+								<li class="posts__item posts__item--category-2 ">
+									<div class="posts__cat">
+										<span class="label posts__cat-label posts__cat-label--category-2">L.O. Heroes</span>
+									</div>
+									<h6 class="posts__title posts__title--color-hover"><a href="_esports_blog-post-1.html">A new mage character is coming to the league</a></h6>
+									<div class="posts__excerpt">Lorem ipsum dolor sit amet adipisicing...</div>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+				<!-- Breaking News / End -->
+
+				<div class="row">
+					<!-- Content -->
+					<div class="content col-lg-8">
+
+						<!-- Posts Area #1 -->
+						<!-- Posts Grid -->
+						<div class="posts posts--tile posts--tile-alt post-grid row">
+
+							<div class="post-grid__item col-sm-6">
+								<div class="posts__item posts__item--tile posts__item--category-1 posts__item--category-4  card">
+									<figure class="posts__thumb">
+										<img src="{{ asset('assets/images/eSports/samples/win.png')}}" alt="">
+										<div class="posts__inner">
+											<div class="posts__cat">
+												<span class="label posts__cat-label posts__cat-label--category-1">Awesome</span><span class="label posts__cat-label posts__cat-label--category-4">Prizes</span>
+											</div>
+											<h6 class="posts__title posts__title--color-hover"><a href="_esports_blog-post-1.html">Test your luck</a></h6>
+											<!-- <time datetime="2018-08-23" class="posts__date">August 27th, 201</time> -->
+										</div>
+									</figure>
+									<a href="_esports_blog-post-1.html" class="posts__cta"></a>
+									<footer class="posts__footer card__footer">
+										<div class="post-author">
+											<figure class="post-author__avatar">
+												<img src="https://media.giphy.com/media/5dYnxnkIVeEy5jj5tQ/giphy.gif" alt="Post Author Avatar">
+											</figure>
+											<div class="post-author__info">
+												<h4 class="post-author__name">Erick Rodgers</h4>
+											</div>
+										</div>
+										<ul class="post__meta meta">
+											<li class="meta__item meta__item--views">2369</li>
+											<li class="meta__item meta__item--likes"><a href="#"><i class="meta-like icon-heart"></i> 530</a></li>
+											<li class="meta__item meta__item--comments"><a href="#">18</a></li>
+										</ul>
+									</footer>
+								</div>
+							</div>
+							<div class="post-grid__item col-sm-6">
+								<div class="posts__item posts__item--tile posts__item--category-2  card">
+									<figure class="posts__thumb">
+										<img src="https://media.giphy.com/media/2djT42mNKro7P3XWmW/giphy.gif" alt="">
+										<div class="posts__inner">
+											<div class="posts__cat">
+												<span class="label posts__cat-label posts__cat-label--category-2">Lucky numbers</span>
+											</div>
+											<h6 class="posts__title posts__title--color-hover"><a href="_esports_blog-post-1.html">Buy your lucky number and win awesome prizes</a></h6>
+											<time datetime="2018-08-23" class="posts__date">August 23rd, 2018</time>
+										</div>
+									</figure>
+									<a href="_esports_blog-post-1.html" class="posts__cta"></a>
+									<footer class="posts__footer card__footer">
+										<div class="post-author">
+											<figure class="post-author__avatar">
+												<img src="{{ asset('assets/images/football/samples/avatar-6-xs.jpg')}}" alt="Post Author Avatar">
+											</figure>
+											<div class="post-author__info">
+												<h4 class="post-author__name">Lagertha Dax</h4>
+											</div>
+										</div>
+										<ul class="post__meta meta">
+											<li class="meta__item meta__item--views">2369</li>
+											<li class="meta__item meta__item--likes"><a href="#"><i class="meta-like icon-heart"></i> 530</a></li>
+											<li class="meta__item meta__item--comments"><a href="#">18</a></li>
+										</ul>
+									</footer>
+								</div>
+							</div>
+							<div class="post-grid__item col-sm-6">
+								<div class="posts__item posts__item--tile posts__item--category-1 posts__item--category-3  card">
+									<figure class="posts__thumb">
+										<img src="https://i2.wp.com/photobooth-me.com/wp-content/uploads/2017/08/Colorwheel-Ver.2-1.gif?resize=577%2C384" alt="">
+										<div class="posts__inner">
+											<div class="posts__cat">
+												<span class="label posts__cat-label posts__cat-label--category-1">Play</span><span class="label posts__cat-label posts__cat-label--category-3">Win</span>
+											</div>
+											<h6 class="posts__title posts__title--color-hover"><a href="_esports_blog-post-1.html">Play and Win</a></h6>
+											<time datetime="2018-08-23" class="posts__date">July 28th, 2019</time>
+										</div>
+									</figure>
+									<a href="_esports_blog-post-1.html" class="posts__cta"></a>
+									<footer class="posts__footer card__footer">
+										<div class="post-author">
+											<figure class="post-author__avatar">
+												<img src="{{ asset('assets/images/football/samples/avatar-6-xs.jpg')}}" alt="Post Author Avatar">
+											</figure>
+											<div class="post-author__info">
+												<h4 class="post-author__name">Lagertha Dax</h4>
+											</div>
+										</div>
+										<ul class="post__meta meta">
+											<li class="meta__item meta__item--views">2369</li>
+											<li class="meta__item meta__item--likes"><a href="#"><i class="meta-like icon-heart"></i> 530</a></li>
+											<li class="meta__item meta__item--comments"><a href="#">18</a></li>
+										</ul>
+									</footer>
+								</div>
+							</div>
+							<div class="post-grid__item col-sm-6">
+								<div class="posts__item posts__item--tile posts__item--category-4  card">
+									<figure class="posts__thumb">
+										<img src="https://media.giphy.com/media/5dYnxnkIVeEy5jj5tQ/giphy.gif" alt="">
+										<div class="posts__inner">
+											<div class="posts__cat">
+												<span class="label posts__cat-label posts__cat-label--category-4">Big Prizes</span>
+											</div>
+											<h6 class="posts__title posts__title--color-hover"><a href="_esports_blog-post-1.html">Win Big Prizes</a></h6>
+											<time datetime="2018-08-23" class="posts__date">July 24th, 2018</time>
+										</div>
+									</figure>
+									<a href="_esports_blog-post-1.html" class="posts__cta"></a>
+									<footer class="posts__footer card__footer">
+										<div class="post-author">
+											<figure class="post-author__avatar">
+												<img src="{{ asset('assets/images/football/samples/avatar-6-xs.jpg')}}" alt="Post Author Avatar">
+											</figure>
+											<div class="post-author__info">
+												<h4 class="post-author__name">Lagertha Dax</h4>
+											</div>
+										</div>
+										<ul class="post__meta meta">
+											<li class="meta__item meta__item--views">2369</li>
+											<li class="meta__item meta__item--likes"><a href="#"><i class="meta-like icon-heart"></i> 530</a></li>
+											<li class="meta__item meta__item--comments"><a href="#">18</a></li>
+										</ul>
+									</footer>
+								</div>
+							</div>
+							<div class="post-grid__item col-sm-6">
+								<div class="posts__item posts__item--tile posts__item--category-2  card">
+									<figure class="posts__thumb">
+										<img src="{{ asset('assets/images/esports/samples/post-img5-card.jpg')}}" alt="">
+										<div class="posts__inner">
+											<div class="posts__cat">
+												<span class="label posts__cat-label posts__cat-label--category-2">Max Potential</span>
+											</div>
+											<h6 class="posts__title posts__title--color-hover"><a href="_esports_blog-post-1.html">The more entries, the more chances of winning</a></h6>
+											<time datetime="2018-08-23" class="posts__date">July 16th, 2019</time>
+										</div>
+									</figure>
+									<a href="_esports_blog-post-1.html" class="posts__cta"></a>
+									<footer class="posts__footer card__footer">
+										<div class="post-author">
+											<figure class="post-author__avatar">
+												<img src="{{ asset('assets/images/football/samples/avatar-6-xs.jpg')}}" alt="Post Author Avatar">
+											</figure>
+											<div class="post-author__info">
+												<h4 class="post-author__name">Lagertha Dax</h4>
+											</div>
+										</div>
+										<ul class="post__meta meta">
+											<li class="meta__item meta__item--views">2369</li>
+											<li class="meta__item meta__item--likes"><a href="#"><i class="meta-like icon-heart"></i> 530</a></li>
+											<li class="meta__item meta__item--comments"><a href="#">18</a></li>
+										</ul>
+									</footer>
+								</div>
+							</div>
+							<div class="post-grid__item col-sm-6">
+								<div class="posts__item posts__item--tile posts__item--category-1  card">
+									<figure class="posts__thumb">
+										<img src="{{ asset('assets/images/esports/samples/post-img6-card.jpg')}}" alt="">
+										<div class="posts__inner">
+											<div class="posts__cat">
+												<span class="label posts__cat-label posts__cat-label--category-1">Play</span>
+											</div>
+											<h6 class="posts__title posts__title--color-hover"><a href="_esports_blog-post-1.html">Play , Win , Repeat</a></h6>
+											<time datetime="2018-08-23" class="posts__date">June 3rd, 2019</time>
+										</div>
+									</figure>
+									<a href="_esports_blog-post-1.html" class="posts__cta"></a>
+									<footer class="posts__footer card__footer">
+										<div class="post-author">
+											<figure class="post-author__avatar">
+												<img src="{{ asset('assets/images/football/samples/avatar-12-xs.jpg')}}" alt="Post Author Avatar">
+											</figure>
+											<div class="post-author__info">
+												<h4 class="post-author__name">Eric Rodgers</h4>
+											</div>
+										</div>
+										<ul class="post__meta meta">
+											<li class="meta__item meta__item--views">2369</li>
+											<li class="meta__item meta__item--likes"><a href="#"><i class="meta-like icon-heart"></i> 530</a></li>
+											<li class="meta__item meta__item--comments"><a href="#">18</a></li>
+										</ul>
+									</footer>
+								</div>
+							</div>
+
+
+
+						</div>
+						<!-- Post Grid / End -->
+						<!-- Posts Area #1 / End -->
+
+						<!-- Posts Area #2 -->
+						<!-- Posts Grid -->
+
+						<!-- Post Grid / End -->
+						<!-- Posts Area #2 / End -->
+
+						<!-- Posts Area #3 -->
+						<!-- Latest Videos -->
+
+						<!-- Latest Videos / End -->
+						<!-- Posts Area #3 / End -->
+
+					</div>
+					<!-- Content / End -->
+
+					<!-- Sidebar -->
+					<div id="sidebar" class="sidebar col-lg-4">
+
+						<!-- Widget: Social Buttons -->
+						<aside class="widget widget--sidebar widget-social widget-social--buttons">
+							<a href="#" class="btn-social-counter btn-social-counter--fb" target="_blank">
+								<div class="btn-social-counter__icon">
+									<i class="fa fa-facebook-official"></i>
+								</div>
+								<h6 class="btn-social-counter__title">Like Our Facebook Page</h6>
+								<span class="btn-social-counter__count"><span class="btn-social-counter__count-num"></span> Likes</span>
+								<span class="btn-social-counter__add-icon"></span>
+							</a>
+							<a href="#" class="btn-social-counter btn-social-counter--twitter" target="_blank">
+								<div class="btn-social-counter__icon">
+									<i class="fa fa-twitter"></i>
+								</div>
+								<h6 class="btn-social-counter__title">Follow Us on Twitter</h6>
+								<span class="btn-social-counter__count"><span class="btn-social-counter__count-num"></span> Followers</span>
+								<span class="btn-social-counter__add-icon"></span>
+							</a>
+							<a href="#" class="btn-social-counter btn-social-counter--twitch" target="_blank">
+								<div class="btn-social-counter__icon">
+									<i class="fa fa-twitch"></i>
+								</div>
+								<h6 class="btn-social-counter__title">Follow Us on Twitch</h6>
+								<span class="btn-social-counter__count"><span class="btn-social-counter__count-num"></span> Subs</span>
+								<span class="btn-social-counter__add-icon"></span>
+							</a>
+							<a href="#" class="btn-social-counter btn-social-counter--youtube" target="_blank">
+								<div class="btn-social-counter__icon">
+									<i class="fa fa-youtube-play"></i>
+								</div>
+								<h6 class="btn-social-counter__title">Follow Us on YouTube</h6>
+								<span class="btn-social-counter__count"><span class="btn-social-counter__count-num"></span> Subs</span>
+								<span class="btn-social-counter__add-icon"></span>
+							</a>
+							<a href="#" class="btn-social-counter btn-social-counter--rss" target="_blank">
+								<div class="btn-social-counter__icon">
+									<i class="fa fa-rss"></i>
+								</div>
+								<h6 class="btn-social-counter__title">Subscribe to Our RSS</h6>
+								<span class="btn-social-counter__count"><span class="btn-social-counter__count-num">840</span> Subs</span>
+								<span class="btn-social-counter__add-icon"></span>
+							</a>
+							<a href="#" class="btn-social-counter btn-social-counter--instagram" target="_blank">
+								<div class="btn-social-counter__icon">
+									<i class="fa fa-instagram"></i>
+								</div>
+								<h6 class="btn-social-counter__title">Follow Us on Instagram</h6>
+								<span class="btn-social-counter__count"><span class="btn-social-counter__count-num"></span> Followers</span>
+								<span class="btn-social-counter__add-icon"></span>
+							</a>
+						</aside>
+						<!-- Widget: Social Buttons / End -->
+
+						<!-- Widget: Latest Results -->
+						<aside class="widget card widget--sidebar widget-results">
+							<div class="widget__title card__header card__header--has-btn">
+								<h4>Latest Results</h4>
+								<a href="#" class="btn btn-default btn-xs card-header__button">See Full Results</a>
+							</div>
+							<div class="widget__content card__content">
+								<dl class="widget-results__dl">
+
+									<dt class="widget-results__dt widget-results__dt--category-4">
+									LUCKY 3 RESULT
+									</dt>
+									<dd class="widget-results__dd">
+										<ul class="widget-results__list">
+										<!-- Game #0 -->
+										<li class="widget-results__item">
+											<div class="widget-results__header justify-content-between">
+												<div class="widget-results__league">1st Week Draw</div>
+												<div class="widget-results__title">Saturday, March 6th</div>
+											</div>
+											<div class="widget-results__content">
+												<div class="widget-results__team widget-results__team--first">
+													<figure class="widget-results__team-logo">
+														<img src="{{ asset('assets/images/esports/logos/alchemists-22x25.png')}}" alt="">
+													</figure>
+													<div class="widget-results__team-details">
+														<h5 class="widget-results__team-name">Jonh Smith</h5>
+														<span class="widget-results__team-info">Winner</span>
+													</div>
+												</div>
+												<!-- <div class="widget-results__result">
+													<div class="widget-results__score">
+														<span class="widget-results__score-winner">8</span> - <span class="widget-results__score-loser">5</span>
+													</div>
+												</div> -->
+												<div class="widget-results__team widget-results__team--second">
+													<figure class="widget-results__team-logo">
+														<img src="{{ asset('assets/images/samples/logos/sharks_shield.png')}}" alt="">
+													</figure>
+													<div class="widget-results__team-details">
+														<h5 class="widget-results__team-name">3, 26 ,31</h5>
+														<span class="widget-results__team-info">Winning Numbers</span>
+													</div>
+												</div>
+											</div>
+										</li>
+										<!-- Game #0 / End -->
+										<!-- Game #1 -->
+
+										<!-- Game #1 / End -->
+										</ul>
+									</dd>
+									<dt class="widget-results__dt widget-results__dt--category-2">
+										INSTANT RAFFLE
+									</dt>
+									<dd class="widget-results__dd">
+										<ul class="widget-results__list">
+										<!-- Game #0 -->
+										<li class="widget-results__item">
+											<div class="widget-results__header justify-content-between">
+												<div class="widget-results__league">1st Draw</div>
+												<div class="widget-results__title">Saturday, March 6th</div>
+											</div>
+											<div class="widget-results__content">
+												<div class="widget-results__team widget-results__team--first">
+													<figure class="widget-results__team-logo">
+														<img src="{{ asset('assets/images/esports/logos/alchemists-22x25.png')}}" alt="">
+													</figure>
+													<div class="widget-results__team-details">
+														<h5 class="widget-results__team-name">Paul Allen</h5>
+														<span class="widget-results__team-info">Winner</span>
+													</div>
+												</div>
+												<!-- <div class="widget-results__result">
+													<div class="widget-results__score">
+														<span class="widget-results__score-loser">15</span> - <span class="widget-results__score-winner">21</span>
+													</div>
+												</div> -->
+												<div class="widget-results__team widget-results__team--second">
+													<figure class="widget-results__team-logo">
+														<img src="{{ asset('assets/images/samples/logos/sharks_shield.png')}}" alt="">
+													</figure>
+													<div class="widget-results__team-details">
+														<h5 class="widget-results__team-name">iPhone XS Max</h5>
+														<span class="widget-results__team-info">Prize</span>
+													</div>
+												</div>
+											</div>
+										</li>
+										<!-- Game #0 / End -->
+										</ul>
+									</dd>
+
+
+								</dl>
+							</div>
+						</aside>
+						<!-- Widget: Latest Results / End -->
+
+						<!-- Widget: Twitch Streams -->
+						<aside class="widget widget--sidebar widget-twitch">
+							<div class="twitch-streams">
+
+								<!-- Stream #0 -->
+								<div class="twitch-stream-wrapper">
+									<a href="#" class="twitch-stream twitch-stream--featured twitch-stream--has-video card">
+										<div class="twitch-stream__overlay twitch-stream__overlay--bg0"></div>
+										<figure class="twitch-stream__img twitch-stream__img--extra-top">
+											<img src="{{ asset('assets/images/esports/samples/twitch-streamer-1.png')}}" alt="">
+										</figure>
+										<div class="twitch-stream__body">
+											<h6 class="twitch-stream__featured">Featured Winner</h6>
+											<h5 class="twitch-stream__title">Bordz Smith </h5>
+											<div class="twitch-stream__info">Won House and Lot</div>
+
+											<div class="twitch-stream__status twitch-stream__status--online">Lucky Winner</div>
+
+
+										</div>
+									</a>
+
+									<!-- <div class="twitch-stream-video card">
+										<div class="card__content">
+											<figure class="twitch-stream-video__clip">
+												<a href="#" class="twitch-stream-video__link" target="_blank"><img src="{{ asset('assets/images/esports/samples/twitch-stream-cover.jpg')}}" alt=""></a>
+											</figure>
+										</div>
+									</div> -->
+
+								</div>
+								<!-- Stream #0 / End -->
+								<!-- Stream #1 -->
+								<!-- <div class="twitch-stream-wrapper">
+									<a href="#" class="twitch-stream   card">
+										<div class="twitch-stream__overlay twitch-stream__overlay--bg1"></div>
+										<figure class="twitch-stream__img ">
+											<img src="{{ asset('assets/images/esports/samples/twitch-streamer-2.png')}}" alt="">
+										</figure>
+										<div class="twitch-stream__body">
+											<h5 class="twitch-stream__title">Assassins League Gameplay</h5>
+											<div class="twitch-stream__info">We start the adventure mode!</div>
+
+											<div class="twitch-stream__status twitch-stream__status--online">Live</div>
+
+
+										</div>
+									</a>
+
+
+								</div> -->
+								<!-- Stream #1 / End -->
+								<!-- Stream #2 -->
+								<!-- <div class="twitch-stream-wrapper">
+									<a href="#" class="twitch-stream   card">
+										<div class="twitch-stream__overlay twitch-stream__overlay--bg2"></div>
+										<figure class="twitch-stream__img ">
+											<img src="{{ asset('assets/images/esports/samples/twitch-streamer-3.png')}}" alt="">
+										</figure>
+										<div class="twitch-stream__body">
+											<h5 class="twitch-stream__title">League of Heroes: Ether Quest</h5>
+											<div class="twitch-stream__info">I’m gonna take the hardest quest</div>
+
+
+											<div class="twitch-stream__status twitch-stream__status--scheduled">Starts in: <div class="twitch-stream__countdown-counter countdown-counter" data-date="December 31, 2018 08:00:00"></div></div>
+
+										</div>
+									</a>
+
+
+								</div> -->
+								<!-- Stream #2 / End -->
+								<!-- Stream #3 -->
+								<!-- <div class="twitch-stream-wrapper">
+									<a href="#" class="twitch-stream   card">
+										<div class="twitch-stream__overlay twitch-stream__overlay--bg3"></div>
+										<figure class="twitch-stream__img ">
+											<img src="{{ asset('assets/images/esports/samples/twitch-streamer-4.png')}}" alt="">
+										</figure>
+										<div class="twitch-stream__body">
+											<h5 class="twitch-stream__title">The Game Huntress&#x27;s Channel</h5>
+											<div class="twitch-stream__info">Join me to hunt them all!</div>
+
+
+
+											<div class="twitch-stream__status twitch-stream__status--offline">Offline</div>
+										</div>
+									</a>
+
+
+								</div> -->
+								<!-- Stream #3 / End -->
+
+
+							</div>
+						</aside>
+						<!-- Widget: Twitch Streams / End -->
+
+						<!-- Widget: Event Result -->
+						<aside class="widget card widget--sidebar widget-game-result">
+							<div class="widget__title card__header card__header--has-btn">
+								<h4>Incoming Draw</h4>
+								<!-- <a href="#" class="btn btn-default btn-xs card-header__button">See All Results</a> -->
+							</div>
+							<div class="widget__content card__content">
+								<!-- Game Score -->
+								<div class="widget-game-result__section">
+									<div class="widget-game-result__section-inner">
+
+										<header class="widget-game-result__header widget-game-result__header--alt widget-game-result__header--alt-compact mb-4">
+											<h3 class="widget-game-result__title">RAFFLE BONANZA</h3>
+											<time class="widget-game-result__date" datetime="2018-04-26">Friday, April 26th</time>
+										</header>
+
+										<header class="widget-game-result__header">
+											<h3 class="widget-game-result__title">PRIZE : MACBOOK PRO</h3>
+											<div class="widget-game-result__subtitle">DRAW PRIZE</div>
+										</header>
+
+										<div class="widget-game-result__main">
+											<!-- 1st Team -->
+											<!-- <div class="widget-game-result__team widget-game-result__team--first">
+												<figure class="widget-game-result__team-logo">
+													<a href="#"><img src="assets/images/esports/logos/alchemists-86x98.png')}}" alt=""></a>
+												</figure>
+												<div class="widget-game-result__team-info">
+													<h5 class="widget-game-result__team-name">Alchemists</h5>
+													<div class="widget-game-result__team-desc">United States</div>
+												</div>
+											</div> -->
+											<!-- 1st Team / End -->
+
+											<!-- <div class="widget-game-result__score-wrap">
+												<div class="widget-game-result__score">
+													<span class="widget-game-result__score-result widget-game-result__score-result--winner">2</span> <span class="widget-game-result__score-dash">-</span> <span class="widget-game-result__score-result widget-game-result__score-result--loser">1</span>
+												</div>
+												<a href="https://www.youtube.com/watch?v=XE0fU9PCrWE" class="widget-game-result__score-video-icon mp_iframe" data-toggle="tooltip" data-placement="bottom" title="Watch Replay"><i class="fa fa-play"></i></a>
+											</div> -->
+
+											<!-- 2nd Team -->
+											<!-- <div class="widget-game-result__team widget-game-result__team--second">
+												<figure class="widget-game-result__team-logo">
+													<a href="#"><img src="{{ asset('assets/images/esports/logos/pirates-114x98.png')}}" alt=""></a>
+												</figure>
+												<div class="widget-game-result__team-info">
+													<h5 class="widget-game-result__team-name">L.A. Pirates</h5>
+													<div class="widget-game-result__team-desc">United States</div>
+												</div>
+											</div> -->
+											<!-- 2nd Team / End -->
+										</div>
+									</div>
+								</div>
+								<!-- Game Score / End -->
+
+								<!-- Game Statistics -->
+								<!-- <div class="widget-game-result__section">
+									<header class="widget-game-result__subheader card__subheader card__subheader--sm card__subheader--nomargins">
+										<h5 class="widget-game-result__subtitle">Match Statistics</h5>
+									</header>
+									<div class="widget-game-result__section-inner"> -->
+
+										<!-- Progress Stats Table -->
+										<!-- <table class="progress-table progress-table--sm-space">
+											<tbody>
+
+												<tr>
+													<td class="progress-table__progress-label progress-table__progress-label--highlight">56</td>
+													<td class="progress-table__progress-bar progress-table__progress-bar--first">
+														<div class="progress progress--lines">
+															<div class="progress__bar" style="width: 60%;" role="progressbar" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100"></div>
+														</div>
+													</td>
+													<td class="progress-table__title">Total Kills</td>
+													<td class="progress-table__progress-bar progress-table__progress-bar--second">
+														<div class="progress progress--lines">
+															<div class="progress__bar progress__bar--custom-color-1" style="width: 40%;" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+														</div>
+													</td>
+													<td class="progress-table__progress-label ">40</td>
+												</tr>
+												<tr>
+													<td class="progress-table__progress-label ">23</td>
+													<td class="progress-table__progress-bar progress-table__progress-bar--first">
+														<div class="progress progress--lines">
+															<div class="progress__bar" style="width: 30%;" role="progressbar" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
+														</div>
+													</td>
+													<td class="progress-table__title">Total Deaths</td>
+													<td class="progress-table__progress-bar progress-table__progress-bar--second">
+														<div class="progress progress--lines">
+															<div class="progress__bar progress__bar--custom-color-1" style="width: 70%;" role="progressbar" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100"></div>
+														</div>
+													</td>
+													<td class="progress-table__progress-label progress-table__progress-label--highlight">38</td>
+												</tr>
+												<tr>
+													<td class="progress-table__progress-label progress-table__progress-label--highlight">14</td>
+													<td class="progress-table__progress-bar progress-table__progress-bar--first">
+														<div class="progress progress--lines">
+															<div class="progress__bar" style="width: 70%;" role="progressbar" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100"></div>
+														</div>
+													</td>
+													<td class="progress-table__title">Total Assists</td>
+													<td class="progress-table__progress-bar progress-table__progress-bar--second">
+														<div class="progress progress--lines">
+															<div class="progress__bar progress__bar--custom-color-1" style="width: 30%;" role="progressbar" aria-valuenow="6" aria-valuemin="0" aria-valuemax="100"></div>
+														</div>
+													</td>
+													<td class="progress-table__progress-label ">6</td>
+												</tr>
+												<tr>
+													<td class="progress-table__progress-label progress-table__progress-label--highlight">19</td>
+													<td class="progress-table__progress-bar progress-table__progress-bar--first">
+														<div class="progress progress--lines">
+															<div class="progress__bar" style="width: 60%;" role="progressbar" aria-valuenow="19" aria-valuemin="0" aria-valuemax="100"></div>
+														</div>
+													</td>
+													<td class="progress-table__title">Pentakills</td>
+													<td class="progress-table__progress-bar progress-table__progress-bar--second">
+														<div class="progress progress--lines">
+															<div class="progress__bar progress__bar--custom-color-1" style="width: 40%;" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+														</div>
+													</td>
+													<td class="progress-table__progress-label ">12</td>
+												</tr>
+
+											</tbody>
+										</table> -->
+										<!-- Progress Stats Table / End -->
+
+									<!-- </div>
+								</div> -->
+								<!-- Game Statistics / End -->
+
+								<!-- Match MVP -->
+								<!-- <div class="widget-game-result__section">
+									<header class="widget-game-result__subheader card__subheader card__subheader--sm card__subheader--nomargins">
+										<h5 class="widget-game-result__subtitle">Match MVP</h5>
+									</header>
+									<div class="widget-game-result__section-inner"> -->
+
+										<!-- MVP -->
+										<!-- <div class="game-result__mvp">
+											<div class="game-result__mvp-player">
+												<div class="game-result__mvp-player-icon-holder">
+													<span class="game-result__mvp-player-icon"><i class="fa fa-star-o"></i></span>
+												</div>
+												<div class="game-result__mvp-player-meta">
+													<h6 class="game-result__mvp-player-name">Destroy Spiegel</h6>
+													<span class="game-result__mvp-player-team">The Alchemists</span>
+												</div>
+											</div>
+											<div class="game-result__mvp-stats">
+												<ul class="game-result__mvp-stats-list list-unstyled">
+													<li class="game-result__mvp-stats-item">
+														<span class="game-result__mvp-stats-value">37</span>
+														<span class="game-result__mvp-stats-label">Kills</span>
+													</li>
+													<li class="game-result__mvp-stats-item">
+														<span class="game-result__mvp-stats-value">2</span>
+														<span class="game-result__mvp-stats-label">Deaths</span>
+													</li>
+													<li class="game-result__mvp-stats-item">
+														<span class="game-result__mvp-stats-value">9</span>
+														<span class="game-result__mvp-stats-label">Assists</span>
+													</li>
+													<li class="game-result__mvp-stats-item">
+														<span class="game-result__mvp-stats-value">13</span>
+														<span class="game-result__mvp-stats-label">Pentakills</span>
+													</li>
+												</ul>
+											</div>
+										</div> -->
+										<!-- MVP / End -->
+
+									<!-- </div>
+								</div> -->
+								<!-- Match MVP / End -->
+
+							</div>
+						</aside>
+						<!-- Widget: Event Result / End -->
+
+						<!-- Widget: Trending News -->
+
+						<!-- Widget: Trending News / End -->
+
+						<!-- Widget: Events Calendar -->
+						<aside class="widget card card--no-paddings widget--sidebar widget-event-calendar">
+							<div class="widget__title card__header">
+								<h4>Events Calendar</h4>
+							</div>
+							<div class="widget__content card__content">
+
+								<!-- Events Calendar -->
+								<div class="alc-event-calendar">
+									<table class="table">
+										<caption>
+											<span class="alc-event-calendar__caption-inner">
+												<span class="alc-event-calendar__caption-nav alc-event-calendar__caption-nav--prev">
+													<a href="#" class="alc-event-calendar__caption-nav-link"></a>
+												</span>
+												<span class="alc-event-calendar__caption-title">November 2019</span>
+												<span class="alc-event-calendar__caption-nav alc-event-calendar__caption-nav--next">
+													<a href="#" class="alc-event-calendar__caption-nav-link"></a>
+												</span>
+											</span>
+										</caption>
+										<thead>
+											<tr>
+												<th data-weekday-abbr="Mon"><span class="weekday">Mo</span></th>
+												<th data-weekday-abbr="Tue"><span class="weekday">Tu</span></th>
+												<th data-weekday-abbr="Wed"><span class="weekday">We</span></th>
+												<th data-weekday-abbr="Thu"><span class="weekday">Th</span></th>
+												<th data-weekday-abbr="Fri"><span class="weekday">Fr</span></th>
+												<th data-weekday-abbr="Sat"><span class="weekday">Sa</span></th>
+												<th data-weekday-abbr="Sun"><span class="weekday">Su</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><span class="day day--muted">28</span></td>
+												<td><span class="day day--muted">29</span></td>
+												<td><span class="day day--muted">30</span></td>
+												<td><span class="day day--muted">31</span></td>
+												<td><span class="day">1</span></td>
+												<td><span class="day">2</span></td>
+												<td><span class="day">3</span></td>
+											</tr>
+											<tr>
+												<td><span class="day">4</span></td>
+												<td><span class="day">5</span></td>
+												<td><span class="day">6</span></td>
+												<td><span class="day">7</span></td>
+												<td><span class="day">8</span></td>
+												<td>
+													<span class="day day--active day--type-1">9</span>
+												</td>
+												<td><span class="day">10</span></td>
+											</tr>
+											<tr>
+												<td><span class="day">11</span></td>
+												<td><span class="day">12</span></td>
+												<td><span class="day">13</span></td>
+												<td><span class="day">14</span></td>
+												<td><span class="day">15</span></td>
+												<td><span class="day">16</span></td>
+												<td><span class="day">17</span></td>
+											</tr>
+											<tr>
+												<td><span class="day">18</span></td>
+												<td><span class="day">19</span></td>
+												<td>
+													<span class="day day--active day--type-4">20</span>
+												</td>
+												<td><span class="day">21</span></td>
+												<td><span class="day">22</span></td>
+												<td><span class="day">23</span></td>
+												<td><span class="day">24</span></td>
+											</tr>
+											<tr>
+												<td><span class="day">25</span></td>
+												<td><span class="day">26</span></td>
+												<td><span class="day">27</span></td>
+												<td><span class="day">28</span></td>
+												<td><span class="day">29</span></td>
+												<td><span class="day">30</span></td>
+												<td><span class="day day--muted">1</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- Events Calendar / End -->
+
+								<!-- Events List -->
+								<ul class="alc-event-list list-unstyled">
+									<li class="alc-event-list__item alc-event-list-item alc-event-list-item--type-1">
+										<div class="alc-event-list-item__header">
+											<time class="alc-event-list-item__date">Friday, September 9th</time>
+										</div>
+										<div class="alc-event-list-item__body">
+											<div class="alc-event-list-item__time">09:00 PM</div>
+											<div class="alc-event-list-item__info">
+												<h6 class="alc-event-list-item__title"><a href="_esports_event-overview-1a.html">LUCKY 3 DRAW</a></h6>
+												<!-- <p class="alc-event-list-item__desc">Join me to play the multiplayer</p> -->
+											</div>
+										</div>
+									</li>
+									<li class="alc-event-list__item alc-event-list-item alc-event-list-item--type-4">
+										<div class="alc-event-list-item__header">
+											<time class="alc-event-list-item__date">Tuesday, September 20th</time>
+										</div>
+										<div class="alc-event-list-item__body">
+											<div class="alc-event-list-item__time">11:00 PM</div>
+											<div class="alc-event-list-item__info">
+												<h6 class="alc-event-list-item__title"><a href="_esports_event-overview-1b.html">RAFFLE BONANZA</a></h6>
+												<!-- <p class="alc-event-list-item__desc">Bug fixes and a new character!</p> -->
+											</div>
+										</div>
+									</li>
+								</ul>
+								<!-- Events List / End -->
+							</div>
+						</aside>
+						<!-- Widget: Events Calendar / End -->
+
+						<!-- Widget: Match Announcement -->
+
+						<!-- Widget: Match Announcement / End -->
+
+					</div>
+					<!-- Sidebar / End -->
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Content / End -->
+
+
+		<!-- Footer
+		================================================== -->
+		<footer id="footer" class="footer">
+
+			<!-- Widget: Instagram Section -->
+			<aside class="widget widget-instagram">
+				<div class="widget__content">
+					<ul id="instagram-feed-section" class="widget-instagram__list widget-instagram__list-section"></ul>
+					<a href="https://www.instagram.com/dan.fisher.dev" class="btn btn-default btn-icon" target="_blank"><i class="fa fa-instagram"></i> Follow Our Instagram</a>
+				</div>
+			</aside>
+			<!-- Widget: Instagram Section / End -->
+
+			<!-- Sponsors / End -->
+
+
+			<!-- Footer Widgets -->
+			<div class="footer-widgets">
+				<div class="footer-widgets__inner">
+					<div class="container">
+						<div class="row">
+							<div class="col-12 col-lg-6">
+								<div class="row">
+									<div class="col-12 col-sm-6 col-md-6">
+										<div class="footer-col-inner">
+											<!-- Widget: Links -->
+											<!-- <aside class="widget widget--footer widget_nav_menu">
+												<h4 class="widget__title">Useful Links</h4>
+												<div class="widget__content">
+													<div class="row">
+														<div class="col">
+															<ul class="widget__list">
+																<li><a href="_esports_index.html">Home</a></li>
+																<li><a href="_esports_blog-1.html">News Page</a></li>
+																<li><a href="_esports_blog-post-1.html">Post Page</a></li>
+																<li><a href="_esports_team-overview.html">Teams</a></li>
+																<li><a href="_esports_team-last-results.html">Team Stats</a></li>
+																<li><a href="_esports_team-roster.html">Roster</a></li>
+																<li><a href="_esports_event-tournament.html">Tournament</a></li>
+															</ul>
+														</div>
+														<div class="col">
+															<ul class="widget__list">
+																<li><a href="_esports_team-player.html">Player Bio</a>
+																<li><a href="_esports_event-overview-1a.html">Match Stats</a>
+																<li><a href="_esports_event-overview-1a.html">Live Stream</a>
+																<li><a href="_esports_team-gallery.html">Gallery</a>
+																<li><a href="_esports_team-videos.html">Videos</a>
+																<li><a href="_esports_shop-fullwidth.html">Merchandise</a>
+																<li><a href="_esports_features-shortcodes.html">Shortcodes</a>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</aside> -->
+											<!-- Widget: Links / End -->
+										</div>
+									</div>
+									<div class="col-6 col-sm-3 col-md-3">
+										<div class="footer-col-inner">
+											<!-- Widget: Links -->
+											<!-- <aside class="widget widget--footer widget_nav_menu">
+												<h4 class="widget__title">Streams</h4>
+												<div class="widget__content">
+													<ul class="widget__list">
+														<li><a href="_esports_team-player.html">The Destroy</a>
+														<li><a href="_esports_team-player.html">FayeDaBebop</a>
+														<li><a href="_esports_team-player.html">Crazzzy_80</a>
+														<li><a href="_esports_team-player.html">Game Huntress</a>
+														<li><a href="_esports_team-player.html">Logan-X</a>
+														<li><a href="_esports_team-player.html">Kelly_Spiegel9</a>
+													</ul>
+												</div>
+											</aside> -->
+											<!-- Widget: Links / End -->
+										</div>
+									</div>
+									<div class="col-6 col-sm-3 col-md-3">
+										<div class="footer-col-inner">
+											<!-- Widget: Pages -->
+											<!-- <aside class="widget widget--footer widget_pages">
+												<h4 class="widget__title">About Us</h4>
+												<div class="widget__content">
+													<ul class="widget__list">
+														<li><a href="_esports_page-contacts.html">Contact</a></li>
+														<li><a href="_esports_page-faqs.html">FAQs</a></li>
+														<li><a href="_esports_page-sponsors.html">Sponsors</a></li>
+														<li><a href="_esports_team-schedule.html">Next Events</a></li>
+														<li><a href="_esports_blog-post-3.html">Guides</a></li>
+														<li><a href="_esports_shop-login.html">Register/Login</a></li>
+														<li><a href="#">Privacy Policy</a></li>
+													</ul>
+												</div>
+											</aside> -->
+											<!-- Widget: Pages / End -->
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6 col-lg-3">
+								<div class="footer-col-inner">
+
+									<!-- Widget: Popular Posts / End -->
+									<!-- <div class="widget widget--footer widget-popular-posts">
+										<h4 class="widget__title">Popular News</h4>
+										<div class="widget__content">
+											<ul class="posts posts--simple-list">
+
+												<li class="posts__item posts__item--category-4 ">
+													<figure class="posts__thumb posts__thumb--hover">
+														<a href="#"><img src="{{ asset('assets/images/esports/samples/post-img4-xs.jpg')}}" alt=""></a>
+													</figure>
+													<div class="posts__inner">
+														<div class="posts__cat">
+															<span class="label posts__cat-label posts__cat-label--category-4">Xenowatch</span>
+														</div>
+														<h6 class="posts__title posts__title--color-hover"><a href="_esports_blog-post-1.html">Xenowatch&#x27;s new patch will fix the faces bugs</a></h6>
+														<time datetime="2017-08-21" class="posts__date">August 27th, 2018</time>
+													</div>
+												</li>
+												<li class="posts__item posts__item--category-2 ">
+													<figure class="posts__thumb posts__thumb--hover">
+														<a href="#"><img src="{{ asset('assets/images/esports/samples/post-img2-xs.jpg')}}" alt=""></a>
+													</figure>
+													<div class="posts__inner">
+														<div class="posts__cat">
+															<span class="label posts__cat-label posts__cat-label--category-2">L.O. Heroes</span>
+														</div>
+														<h6 class="posts__title posts__title--color-hover"><a href="_esports_blog-post-1.html">A new mage character is coming to the League</a></h6>
+														<time datetime="2017-08-21" class="posts__date">July 16th, 2018</time>
+													</div>
+												</li>
+
+											</ul>
+										</div>
+									</div> -->
+									<!-- Widget: Popular Posts / End -->
+
+								</div>
+							</div>
+							<div class="col-sm-6 col-lg-3">
+								<div class="footer-col-inner">
+
+									<!-- Widget: Popular Posts / End -->
+									<!-- <div class="widget widget--footer widget-popular-posts">
+										<h4 class="widget__title">Featured News</h4>
+										<div class="widget__content">
+											<ul class="posts posts--simple-list">
+
+												<li class="posts__item posts__item--category-1 posts__item--category-3 ">
+													<figure class="posts__thumb posts__thumb--hover">
+														<a href="#"><img src="{{ asset('assets/images/esports/samples/post-img3-xs.jpg')}}" alt=""></a>
+													</figure>
+													<div class="posts__inner">
+														<div class="posts__cat">
+															<span class="label posts__cat-label posts__cat-label--category-1">The Team</span><span class="label posts__cat-label posts__cat-label--category-3">Striker GO</span>
+														</div>
+														<h6 class="posts__title posts__title--color-hover"><a href="_esports_blog-post-1.html">The Team defeated the L.A. Pirates 2-1 in the Pro League...</a></h6>
+														<time datetime="2017-08-21" class="posts__date">September 24th, 2018</time>
+													</div>
+												</li>
+												<li class="posts__item posts__item--category-4 ">
+													<figure class="posts__thumb posts__thumb--hover">
+														<a href="#"><img src="{{ asset('assets/images/esports/samples/post-img13-xs.jpg')}}" alt=""></a>
+													</figure>
+													<div class="posts__inner">
+														<div class="posts__cat">
+															<span class="label posts__cat-label posts__cat-label--category-4">Xenowatch</span>
+														</div>
+														<h6 class="posts__title posts__title--color-hover"><a href="_esports_blog-post-1.html">New modes are coming in the April update</a></h6>
+														<time datetime="2017-08-21" class="posts__date">June 18th, 2018</time>
+													</div>
+												</li>
+
+											</ul>
+										</div>
+									</div> -->
+									<!-- Widget: Popular Posts / End -->
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- Footer Widgets / End -->
+
+			<!-- Footer Social Links -->
+			<div class="footer-social">
+				<div class="container">
+					<ul class="footer-social__list list-unstyled">
+						<li class="footer-social__item">
+							<a href="#" class="footer-social__link">
+								<span class="footer-social__icon">
+									<i class="fa fa-facebook-square"></i>
+								</span>
+								<div class="footer-social__txt">
+									<span class="footer-social__name">Facebook</span>
+									<span class="footer-social__user">/alchemistsgaming</span>
+								</div>
+							</a>
+						</li>
+						<li class="footer-social__item">
+							<a href="#" class="footer-social__link">
+								<span class="footer-social__icon">
+									<i class="fa fa-twitter"></i>
+								</span>
+								<div class="footer-social__txt">
+									<span class="footer-social__name">Twitter</span>
+									<span class="footer-social__user">@alchemistsgaming</span>
+								</div>
+							</a>
+						</li>
+						<li class="footer-social__item">
+							<a href="#" class="footer-social__link">
+								<span class="footer-social__icon">
+									<i class="fa fa-twitch"></i>
+								</span>
+								<div class="footer-social__txt">
+									<span class="footer-social__name">Twitch</span>
+									<span class="footer-social__user">@alchemistsgaming</span>
+								</div>
+							</a>
+						</li>
+						<li class="footer-social__item">
+							<a href="#" class="footer-social__link">
+								<span class="footer-social__icon">
+									<i class="fa fa-youtube-play"></i>
+								</span>
+								<div class="footer-social__txt">
+									<span class="footer-social__name">YouTube</span>
+									<span class="footer-social__user">@alchemistsgaming</span>
+								</div>
+							</a>
+						</li>
+						<li class="footer-social__item">
+							<a href="#" class="footer-social__link">
+								<span class="footer-social__icon">
+									<i class="fa fa-google-plus"></i>
+								</span>
+								<div class="footer-social__txt">
+									<span class="footer-social__name">Google+</span>
+									<span class="footer-social__user">/alchemistsgaming</span>
+								</div>
+							</a>
+						</li>
+						<li class="footer-social__item">
+							<a href="#" class="footer-social__link">
+								<span class="footer-social__icon">
+									<i class="fa fa-instagram"></i>
+								</span>
+								<div class="footer-social__txt">
+									<span class="footer-social__name">Instagram</span>
+									<span class="footer-social__user">@alchemistsgaming</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- Footer Social Links / End -->
+		</footer>
+		<!-- Footer / End -->
+
+	</div>
+
+	<!-- Javascript Files
+	================================================== -->
+	<!-- Core JS -->
+	<script src="{{ asset('assets/vendor/jquery/jquery.min.js')}}"></script>
+	<script src="{{ asset('assets/vendor/jquery/jquery-migrate.min.js')}}"></script>
+	<script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.js')}}"></script>
+	<script src="{{ asset('assets/js/core.js') }}"></script>
+
+	<!-- Vendor JS -->
+	<script src="{{ asset('assets/vendor/twitter/jquery.twitter.js') }}"></script>
+	<script src="{{ asset('assets/vendor/jquery-duotone/jquery.duotone.min.js')}}"></script>
+	<script src="{{ asset('assets/vendor/marquee/jquery.marquee.min.js')}}"></script>
+
+
+	<!-- Template JS -->
+	<script src="{{ asset('assets/js/init.js')}}"></script>
+	<script src="{{ asset('assets/js/custom.js')}}"></script>
+
+	<!-- Duotone Filters -->
+	<svg xmlns="http://www.w3.org/2000/svg" class="svg-filters">
+		<filter id="duotone-filter-base">
+			<feColorMatrix type="matrix" result="grayscale"
+				values="1 0 0 0 0
+								1 0 0 0 0
+								1 0 0 0 0
+								0 0 0 1 0" >
+			</feColorMatrix>
+			<feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
+				<feFuncR type="table" tableValues="0.211764705882353 0.325490196078431"></feFuncR>
+				<feFuncG type="table" tableValues="0.168627450980392 0.262745098039216"></feFuncG>
+				<feFuncB type="table" tableValues="0.270588235294118 0.415686274509804"></feFuncB>
+				<feFuncA type="table" tableValues="0 1"></feFuncA>
+			</feComponentTransfer>
+		</filter>
+		<filter id="duotone-filter-color-primary">
+			<feColorMatrix type="matrix" result="grayscale"
+				values="1 0 0 0 0
+								1 0 0 0 0
+								1 0 0 0 0
+								0 0 0 1 0" >
+			</feColorMatrix>
+			<feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
+				<feFuncR type="table" tableValues="0.113725490196078 0"></feFuncR>
+				<feFuncG type="table" tableValues="0.07843137254902 1"></feFuncG>
+				<feFuncB type="table" tableValues="0.16078431372549 0.3568627451"></feFuncB>
+				<feFuncA type="table" tableValues="0 1"></feFuncA>
+			</feComponentTransfer>
+		</filter>
+		<filter id="duotone-filter-color-info">
+			<feColorMatrix type="matrix" result="grayscale"
+				values="1 0 0 0 0
+								1 0 0 0 0
+								1 0 0 0 0
+								0 0 0 1 0" >
+			</feColorMatrix>
+			<feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
+				<feFuncR type="table" tableValues="0.113725490196078 0"></feFuncR>
+				<feFuncG type="table" tableValues="0.07843137254902 0.870588235294118"></feFuncG>
+				<feFuncB type="table" tableValues="0.16078431372549 1"></feFuncB>
+				<feFuncA type="table" tableValues="0 1"></feFuncA>
+			</feComponentTransfer>
+		</filter>
+		<filter id="duotone-filter-page-heading">
+			<feColorMatrix type="matrix" result="grayscale"
+				values="1 0 0 0 0
+								1 0 0 0 0
+								1 0 0 0 0
+								0 0 0 1 0" >
+			</feColorMatrix>
+			<feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
+				<feFuncR type="table" tableValues="0.113725490196078 0"></feFuncR>
+				<feFuncG type="table" tableValues="0.07843137254902 1"></feFuncG>
+				<feFuncB type="table" tableValues="0.16078431372549 0.3568627451"></feFuncB>
+				<feFuncA type="table" tableValues="0 1"></feFuncA>
+			</feComponentTransfer>
+		</filter>
+		<filter id="duotone-filter-player-slider-blue">
+			<feColorMatrix type="matrix" result="grayscale"
+				values="1 0 0 0 0
+								1 0 0 0 0
+								1 0 0 0 0
+								0 0 0 1 0" >
+			</feColorMatrix>
+			<feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
+				<feFuncR type="table" tableValues="0.168627451 0.247058823529412"></feFuncR>
+				<feFuncG type="table" tableValues="0.133333333333333 0.203921568627451"></feFuncG>
+				<feFuncB type="table" tableValues="0.211764705882353 0.858823529411765"></feFuncB>
+				<feFuncA type="table" tableValues="0 1"></feFuncA>
+			</feComponentTransfer>
+		</filter>
+		<filter id="duotone-filter-player-slider-green">
+			<feColorMatrix type="matrix" result="grayscale"
+				values="1 0 0 0 0
+								1 0 0 0 0
+								1 0 0 0 0
+								0 0 0 1 0" >
+			</feColorMatrix>
+			<feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
+				<feFuncR type="table" tableValues="0.168627451 0"></feFuncR>
+				<feFuncG type="table" tableValues="0.133333333333333 1"></feFuncG>
+				<feFuncB type="table" tableValues="0.211764705882353 0.356862745098039"></feFuncB>
+				<feFuncA type="table" tableValues="0 1"></feFuncA>
+			</feComponentTransfer>
+		</filter>
+		<filter id="duotone-filter-player-slider-red">
+			<feColorMatrix type="matrix" result="grayscale"
+				values="1 0 0 0 0
+								1 0 0 0 0
+								1 0 0 0 0
+								0 0 0 1 0" >
+			</feColorMatrix>
+			<feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
+				<feFuncR type="table" tableValues="0.168627451 1"></feFuncR>
+				<feFuncG type="table" tableValues="0.133333333333333 0.109803921568627"></feFuncG>
+				<feFuncB type="table" tableValues="0.211764705882353 0.36078431372549"></feFuncB>
+				<feFuncA type="table" tableValues="0 1"></feFuncA>
+			</feComponentTransfer>
+		</filter>
+		<filter id="duotone-filter-player-slider-gray">
+			<feColorMatrix type="matrix" result="grayscale"
+				values="1 0 0 0 0
+								1 0 0 0 0
+								1 0 0 0 0
+								0 0 0 1 0" >
+			</feColorMatrix>
+			<feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
+				<feFuncR type="table" tableValues="0.168627451 0.8549019608"></feFuncR>
+				<feFuncG type="table" tableValues="0.133333333333333 0.8549019608"></feFuncG>
+				<feFuncB type="table" tableValues="0.211764705882353 0.8549019608"></feFuncB>
+				<feFuncA type="table" tableValues="0 1"></feFuncA>
+			</feComponentTransfer>
+		</filter>
+		<filter id="duotone-filter-player-slider-aqua">
+			<feColorMatrix type="matrix" result="grayscale"
+				values="1 0 0 0 0
+								1 0 0 0 0
+								1 0 0 0 0
+								0 0 0 1 0" >
+			</feColorMatrix>
+			<feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
+				<feFuncR type="table" tableValues="0.168627451 0.133333333333333"></feFuncR>
+				<feFuncG type="table" tableValues="0.133333333333333 0.866666666666667"></feFuncG>
+				<feFuncB type="table" tableValues="0.211764705882353 0.933333333333333"></feFuncB>
+				<feFuncA type="table" tableValues="0 1"></feFuncA>
+			</feComponentTransfer>
+		</filter>
+		<filter id="duotone-filter-player-slider-yellow">
+			<feColorMatrix type="matrix" result="grayscale"
+				values="1 0 0 0 0
+								1 0 0 0 0
+								1 0 0 0 0
+								0 0 0 1 0" >
+			</feColorMatrix>
+			<feComponentTransfer color-interpolation-filters="sRGB" result="duotone">
+				<feFuncR type="table" tableValues="0.168627451 1"></feFuncR>
+				<feFuncG type="table" tableValues="0.133333333333333 0.8"></feFuncG>
+				<feFuncB type="table" tableValues="0.211764705882353 0"></feFuncB>
+				<feFuncA type="table" tableValues="0 1"></feFuncA>
+			</feComponentTransfer>
+		</filter>
+	</svg>
+	<!-- Duotone Filters / End -->
+
 </body>
 </html>
-
